@@ -8,7 +8,7 @@ print(f'el resultado de la suma 6+6 es {resultado}')
 print("Hola" + ' ' + "Luis")
 
 # la barra invertida le dice a python que el caracter no se tome como texto, si no como especial
-print("me llamo \"Luis\"")
+print("me llamo \"Luis\" ")
 
 # n es salto de linea y \t para la siguiente linea tabular
 print("esta es una linea\ny esta es otra\ny este otra")
