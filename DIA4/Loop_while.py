@@ -50,7 +50,6 @@ for letra in nombre:
         break
     print(letra)
 
-
 lista_numeros = [4, 5, 8, 7, 6, 9, 8, 2, 4,
                  5, 7, 1, 9, 5, 6, -1, -5, 6, -6, -4, -3]
 for numeros in lista_numeros:
@@ -58,5 +57,10 @@ for numeros in lista_numeros:
         break
     print(numeros)
 
+# el pass se utiliza como un ticket de entrada vacia en donde hace falta codigo pero aun no se implementa
 
- # el pass se utiliza como un ticket de entrada vacia en donde hace falta codigo pero aun no se implementa
+numero = 5
+while numero > 0:
+    print(f"Despegue en {numero}")
+    numero -= 1
+print("Nos fuimooooooooooooos")
