@@ -34,3 +34,10 @@ mi_dic["edad"] = 36
 mi_dic["ocupacion"] = "Editora"
 print(mi_dic)
 
+# cabe aclarar que podemos crar diccionarios por compresion como con las listas
+cadena = "Luis alejandro aeiou aeiou aeiou"
+vocales = ['a', 'e', 'i', 'o', 'u']
+conteo = {vocal: cadena.count(vocal) for vocal in vocales}
+
+print(conteo)
+

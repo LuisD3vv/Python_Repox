@@ -1,5 +1,5 @@
 print("Hola Mundo 'Te digo hola '")
-# no solamente imprimne texto, sino tambien numero y operaciones
+# no solamente imprime texto, sino también numero y operaciones
 
 suma = 6 + 6
 resultado = suma
@@ -17,4 +17,4 @@ print("luis \tculo")
 
 print("en caso de necesitar escibrir una barra invertida, usariamos doble barra invertida \\")
 
-print('This isn\'t a number')  # en caso de necesitar escribir en ingles
+print('This isn\'t a number')  # en caso de necesitar escribir en inglés
