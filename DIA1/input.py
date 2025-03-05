@@ -1,5 +1,5 @@
 import random
-# a diferencia d eprint que solo imprime, input recibe los datos y puede guardar la variable
+# a diferencia de print que solo imprime, input recibe los datos y puede guardar la variable
 Nombre = input("Dime tu Nombre: ")
 Apellido = input("Dime tu Apellido: ")
 

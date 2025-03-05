@@ -18,6 +18,6 @@ def ceros(*args):  # la razon del -1 es para evitar que el indice que coloquemos
     return False
 
 
-print(ceros( 0,2, 3, 0,1, 0, 23, 4,0))
+print(ceros( 0,2,0, 3, 0,1, 0, 23, 4))
 
 # indices ce(0, 1, 2, 3,  4,  5,  6, 7, )

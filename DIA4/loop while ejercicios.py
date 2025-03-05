@@ -1,6 +1,4 @@
 # inicio = 50
-
-
 # while inicio % 5 == 0:
 #         print('si')
 # if not inicio % 5 == 0:
@@ -12,7 +10,7 @@
 
 num = 1
 while num <= 100:
-    if num % 5 == 0:
+    if num % 2 == 0:
         print('divisible')
     else:
         print(num)
@@ -20,7 +18,7 @@ while num <= 100:
     
 num = 50
 while num <= 50:
-    if num % 5 == 0:
+    if num % 2 != 0:
         print('divisible')
     else:
         print(num)

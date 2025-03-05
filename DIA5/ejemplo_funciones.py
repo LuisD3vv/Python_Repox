@@ -1,4 +1,4 @@
-precios_cafe = [('capuchino,', 1.5), ('Expresso', 2.5), ('Moka', 1.9)]
+precios_cafe = [ ('vilato', 4.5),('capuchino,', 1.5), ('Expresso', 2.5), ('Moka', 1.9), ('frappe', 2.6)]
 
 
 def cafe_mas_caro(lista_precios):

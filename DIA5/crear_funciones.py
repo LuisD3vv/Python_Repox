@@ -7,6 +7,4 @@ def saludar_persona(nombre):
     a la funcion posteriorimente, junto con un nombre imprimira
     el hola + el nombre otorgado
     """
-
-
 saludar_persona("Luis")

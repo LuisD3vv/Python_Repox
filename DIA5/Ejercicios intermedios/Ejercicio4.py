@@ -12,7 +12,7 @@ def contar_primos(numero): # Creamos la funcion con el parametro de numero
 
          for n in range(3,iteracion,2):
 
-            if iteracion % n ==  0:
+            if iteracion % n == 0:
                 iteracion += 2
                 break
          else:

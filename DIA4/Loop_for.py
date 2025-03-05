@@ -8,7 +8,7 @@
 
 # Donde:
 
-#     elemento es una variable que toma el valor de cada elemento en la secuencia en cada iteración del bucle.
+#  elemento es una variable que toma el valor de cada elemento en la secuencia en cada iteración del bucle.
 #  secuencia es la secuencia sobre la que se está iterando, como una lista, tupla, rango, cadena de caracteres, etc.
 
 numeros = [1, 2, 3, 4, 5]
@@ -43,8 +43,7 @@ mi_valor = 0
 
 
 for numero in numeros:
-    mi_valor = mi_valor + numero
-
+    mi_valor += numero
     print(mi_valor)
 
 # ----------- EJERCICIO 4 --------------------------
@@ -70,7 +69,7 @@ for a, b in dic.items():
 
 # ----------- EJERCICIO 7 --------------------------
 """
-Cuando queremos verificar una condicion y esta depende de la indencacion actual del codigo.
+Cuando queremos verificar una condicion y esta depende de la indentacion actual del codigo.
 """
 
 for num in range(3):
