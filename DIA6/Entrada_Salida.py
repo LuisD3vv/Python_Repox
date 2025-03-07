@@ -5,7 +5,7 @@ r sirve para leer el archivo e imprmir sus lineas
 a sirve para escribir al ultimo del elemento, util para hacer logs
 w sirve para modificcar o crear un archivo.
 """
-lectura = open("prueba.txt")
+lectura = open("prueba.txt", 'r')
 
 print(lectura.read())
 
