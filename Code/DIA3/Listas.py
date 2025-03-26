@@ -14,3 +14,6 @@ lista.sort() # reorganizar elementos
 lista.reverse() # literalmente al reves
 print(lista)
 print(lista2)
+
+# Para crear una nueva instancia se utiliza el metodo sorted
+#para aplicar una funcion a un iterable o elementos se utiliza map o lamda, yield

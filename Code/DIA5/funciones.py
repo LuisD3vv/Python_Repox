@@ -3,7 +3,7 @@ def saludar_persona(nombre):
 
 
 saludar_persona('Luis')
-saludar_persona('Valeria')
+saludar_persona('isabel')
 
 # Ejemplo
 
@@ -46,3 +46,11 @@ def cuadrado(un_numero):
 
 un_numero = 10
 
+# Una funcion tambien puede recibir argumentos indirectamente o como resultado de otra funcion
+
+def cuadrado(numero):
+    print(numero ** 2)
+
+
+numero = 2
+cuadrado(numero)

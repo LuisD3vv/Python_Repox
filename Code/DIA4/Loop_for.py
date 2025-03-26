@@ -1,24 +1,27 @@
-#* Que son los loop for
+"""
+    Que son los loop for
+    Un bucle for en Python es una estructura de control que se utiliza para iterar sobre una secuencia (como una lista, una tupla, un diccionario, una cadena de caracteres, etc.)
+    y ejecutar un bloque de código una vez para cada elemento de esa secuencia.
+    La sintaxis general de un bucle for en Python es la siguiente:
 
-# Un bucle for en Python es una estructura de control que se utiliza para iterar sobre una secuencia (como una lista, una tupla, un diccionario, una cadena de caracteres, etc.) y ejecutar un bloque de código una vez para cada elemento de esa secuencia.
-# La sintaxis general de un bucle for en Python es la siguiente:
+    for elemento in secuencia:
+    Bloque de código a ejecutar para cada elemento
 
-# for elemento in secuencia:
-# Bloque de código a ejecutar para cada elemento
+    Donde:
 
-# Donde:
-
-#  elemento es una variable que toma el valor de cada elemento en la secuencia en cada iteración del bucle.
-#  secuencia es la secuencia sobre la que se está iterando, como una lista, tupla, rango, cadena de caracteres, etc.
-
+    elemento es una variable que toma el valor de cada elemento en la secuencia en cada iteración del bucle.
+    secuencia es la secuencia sobre la que se está iterando, como una lista, tupla, rango, cadena de caracteres, etc.
+"""
 numeros = [1, 2, 3, 4, 5]
 
 for numero in numeros:
     print(numero)
+"""
+Este bucle for imprimirá cada número en la lista numeros en una línea separada.
 
-# Este bucle for imprimirá cada número en la lista numeros en una línea separada.
+El bucle for en Python es muy versátil y puede utilizarse para iterar sobre una variedad de objetos y tipos de datos, lo que lo convierte en una herramienta muy útil en la programación.
 
-# El bucle for en Python es muy versátil y puede utilizarse para iterar sobre una variedad de objetos y tipos de datos, lo que lo convierte en una herramienta muy útil en la programación.
+"""
 
 # ----------- EJERCICIO 1 --------------------------
 

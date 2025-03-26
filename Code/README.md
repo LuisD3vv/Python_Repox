@@ -5,3 +5,4 @@
 
 >[!NOTE]
 >Todo el contenido que esta en este repositorio, es gracias al curso de [Udemy](https://www.udemy.com/course/python->total/) llamado "Python Total en 16 dias" de Federico Garay, todos los creditos correspondientes a su creador, pero en >lo que aqui nos conscierne es aprender python desde la raiz hasta poder trabajar con archivos y paginas, y uno que >otro marco de desarrollo
+****

@@ -1,4 +1,4 @@
-print("------------------buenas tardes-----------------\n bienvenido al sistema de comisiones de sars \n para "
+print("------------------buenas tardes-----------------\n bienvenido al sistema de comisiones de sarscov \n para "
       "empezar, dinos tu nombre")
 nombre = input("¿Cual es tu nombre?: ")
 ventas = int(input("Ingresa las ventas que tuviste este mes: "))
