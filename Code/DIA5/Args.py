@@ -79,7 +79,8 @@ print(lista_atributos(a= 5, g = 4, b=4))
 
 def describir_persona(nombre, **kwargs):
        print(f"Características de {nombre}:")
-# desempaquetar diccionario
+       for ojos, pelo in kwargs.items():
+           print(f"{ojos} = {pelo}")
 
 
 kwargs = {'color_ojos': 'Cafe', 'color_pelo': 'Cafe oscuro'}

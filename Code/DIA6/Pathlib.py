@@ -14,4 +14,4 @@ else:
 print(carpeta.parent) # /home/lissandrito
 print(carpeta.name) # nombre del archivo .txt
 print(carpeta.suffix) # tipo de archivo
-print(carpeta.stem) # documento
+print(carpeta.stem) # documento o quitar extension

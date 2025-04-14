@@ -6,6 +6,6 @@ from os import system
 nombre = input("Dime tu nombre: ")
 edad = input("Dime tu edad: ")
 
-system("clear")
+system("cl")
 
 print(f" Tu {nombre} y edad {edad}")

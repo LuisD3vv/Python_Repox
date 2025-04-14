@@ -2,17 +2,17 @@ import os
 # La libreria
 from pathlib import Path
 
-#rita = os.path.isfile()
-#rita - os.path.isdir()
-#ruta = os.path.exist()
-#ruta = os.listdir()
-#ruta = os.makedirs()
-#ruta = os.rename()
-# ruta = os.getcwd()
-# ruta = os.chdir("/home/lissandro/Descargas/hombres.csv")
+# ruta = os.path.isfile()
+# ruta = os.path.isdir()
+# ruta = os.path.exist()
+# ruta = os.listdir()
 # ruta = os.makedirs()
+# ruta = os.rename()
+# ruta = os.getcwd()
+# ruta = os.chdir("/home/lissandro/Descargas/hombres.csv") cambiar de directorio
+# ruta = os.makedirs() crear directorio util para el proyecto 6
 # ruta = os.path.split()
-# os.rmdir('ruta') eliminar
+# os.rmdir('ruta') eliminar directorio util para el proyecto 6
 #os.stat()
 # otro_archivo = open('prueba.txt')
 
