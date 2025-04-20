@@ -1,24 +1,23 @@
 import os # Manipular directorios y archivos del sistema.
 from pathlib import Path # Manipular y crear rutas
-from pathlib import PureWindowsPath
 
+# Con La funcion path nos permite leer rutas tanto como windows y linux
 
+# Creando la ruta absoluta parab los diferemntes directorios
 
-# Creando la ruta absoluta
-directorio = Path("/home/lissandro/Escritorio/Recetas/Recetas")
-ruta_windows = PureWindowsPath(directorio)
+ruta = convertir_ruta(Path("/home/lissandro/Escritorio/Recetas/Recetas"))
 
 # Contar los archivos
 archivos_txt = 0
 
 # Iteracion para buscar recursivamente dentro de subcarpetas, con ayuda del os.walk()
-for carpeta, subcarpeta, archivos in os.walk(directorio):
+for carpeta, subcarpeta, archivos in os.walk(ruta):
     archivos_txt += sum(1 for archivos in archivos if archivos.endswith(".txt"))
 
 '''
 Alternativa con Path
 
-# Ruta del directorio
+# Ruta del directorio 
 directorio = Path('ruta/del/directorio')
 
 # Contar archivos .txt de manera recursiva
@@ -26,7 +25,7 @@ archivos_txt = len(list(directorio.rglob('*.txt')))
 '''
 
 # Imprimiendo La primera parte
-print(f"Bienvenido, La carpeta recetas se encuentra en la siguiente ruta [{directorio}]")
+print(f"Bienvenido, La carpeta recetas se encuentra en la siguiente ruta [{ruta}]")
 print(f"Numero de Recetas disponibles: {archivos_txt}")
 
 # Directorio general
@@ -108,8 +107,10 @@ while True:
             continue
         else:
             print("Intenta de nuevo")
-
-
+    if opcion == 3:
+        print("Has elegido crear una categoria")
+    # ruta = os.makedirs() crear directorio util para el proyecto 6
+    # os.rmdir('ruta') eliminar directorio util para el proyecto 6
     elif opcion == 6:
         print("Has salido")
         exit()# Salir de todo el codigo

@@ -2,6 +2,9 @@ import os
 # La libreria
 from pathlib import Path
 
+# ruta = os.path.basename()
+# ruta = os.path.dirname()
+# ruta = os.path.split(ruta)
 # ruta = os.path.isfile()
 # ruta = os.path.isdir()
 # ruta = os.path.exist()
@@ -15,6 +18,7 @@ from pathlib import Path
 # os.rmdir('ruta') eliminar directorio util para el proyecto 6
 #os.stat()
 # otro_archivo = open('prueba.txt')
+
 
 carpeta = Path('/home/lissandro/') / 'ejemplo udemy de rutas'  # ruta de path
 
