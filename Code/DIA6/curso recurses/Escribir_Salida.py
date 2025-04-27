@@ -4,7 +4,7 @@ lectura.write("Nuevo inicio de sesión\n")
 
 lectura.close()
 
-lectura = open("mi_archivo.txt",'r')
+lectura = open("mi_archivo.txt", 'r')
 
 print(lectura.read())
 

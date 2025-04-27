@@ -1,0 +1,2 @@
+Estoy probando cambiar las rutas manualmente y que solamente cambie el path inicial
+dependiendo del sistema operativo

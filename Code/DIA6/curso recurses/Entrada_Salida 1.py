@@ -5,7 +5,7 @@
 "a" sirve para escribir al ultimo del elemento, util para hacer logs
 "w" sirve para modificar o crear un archivo.
 """
-lectura = open("prueba.txt", 'r')
+lectura = open("../prueba.txt", 'r')
 for l in lectura:
     print(l)
 print(lectura.read(), end=" ")
@@ -14,7 +14,7 @@ lectura.close()  # buena practica.
 
 print("con open \n")
 # Otra forma que cierra automaticamente
-with open("prueba.txt", 'r') as lecturita:
+with open("../prueba.txt", 'r') as lecturita:
     print(lecturita.readlines()) # Regresa una linea
 
 # Por cosecuencia todos lo metodos de string se pueden utilzar.
