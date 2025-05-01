@@ -35,8 +35,20 @@ def Os():
     #regresar ruta del sistema
     pass
 
-def rutas(ruta, diretorio):
-    # generar rutas segun los directoprios disponibles
+def rutas(directorios, eliminar,Categoria_nueva(#para agregar automaticamente al dic)):
+    """
+    ruta = Path("C:\\Users\\HP\\PycharmProjects\\Python_Repox\\Code\\DIA6\\Recetas")
+    directorios = {receta: ruta}
+
+    SI NO ESTA:
+    Iterar y añadirla al directorio junto con el prefijo path, es decir
+    if not elemento startwith(path):
+        elemento + path
+
+    de modo que si entra la nueva categoria solamente entraria el nombre, y dentro de la funcion
+    se le añadiria receta:ruta al final solamente cambia el nombre final, de esta forma seria
+    mucho mas efectivo, asi podria tambien reutilizar la funcion para borrar categorias.
+    """
 pass
 
 

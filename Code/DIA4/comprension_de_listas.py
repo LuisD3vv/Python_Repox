@@ -9,3 +9,13 @@ pies = [10, 20, 30, 40, 50]
 metros = [p * 3.281 for p in pies]
 
 print(metros)
+
+# [nueva_elemento for elemento in iterable if condición]
+
+pares = [x for x in range(10) if x % 2 == 0]
+print(pares)  # [0, 2, 4, 6, 8]
+
+
+# {clave: valor for elemento in iterable if condición}
+pares_cuadrados = {x: x**2 for x in range(10) if x % 2 == 0}
+print(pares_cuadrados)  # {0: 0, 2: 4, 4: 16, 6: 36, 8: 64}
