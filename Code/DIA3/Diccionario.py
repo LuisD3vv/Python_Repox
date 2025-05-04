@@ -27,6 +27,7 @@ print(dict)
 print(dict.keys()) # imprimira todas las claves
 print(dict.values()) # imprimira todos los valores
 print(dict.items()) # imprimira los items es decir {1:'a', 2:'b'}
+print(dict.get(2))
 
 # ----------------- Ejemplo de actualizacion de diccionario
 mi_dic = {"nombre": "Karen", "apellido": "Jurgens", "edad": 35, "ocupacion": "Periodista"}

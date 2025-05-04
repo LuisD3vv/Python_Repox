@@ -1,19 +1,14 @@
-import os # Manipular directorios y archivos del sistema.
-from pathlib import Path # Manipular y crear rutas
+import os  # Manipular directorios y archivos del sistema.
+from pathlib import Path  # Manipular y crear rutas
 
-# Con La funcion path nos permite leer rutas tanto como windows y linux
-
-# Creando la ruta absoluta parab los diferemntes directorios
 
 if os.name == "nt":
     print("Estas en un sistema Windows")
 elif os.name == "posix":
     print("Estas en un sistema Linux")
 
-
-ruta = Path.home() / "Python_Repox" / "Python_Repox" / "Code" / "DIA6" / "Recetas"
+ruta = Path.home() / "PycharmProjects" / "Python_Repox" / "Code" / "DIA6" / "Recetas"
 print(ruta)
-
 
 # Contar los archivos
 archivos_txt = 0
@@ -24,83 +19,60 @@ for carpeta, subcarpeta, archivos in os.walk(ruta):
 
 # Imprimiendo La primera parte
 print(f"Bienvenido, La carpeta recetas se encuentra en la siguiente ruta [{ruta}]")
-print(f"Numero de Recetas disponibles: [-{archivos_txt}-]")
+print(f"Numero de Recetas disponibles inicialmente: [-{archivos_txt}-]")
+
+cate = os.listdir(ruta)
+
+def listar_dir(categoria):
+    return os.listdir(ruta / categoria)
 
 
-
-ruta_recetas = Path("C:\\Users\\HP\\PycharmProjects\\Python_Repox\\Code\\DIA6\\Recetas")
-cate = os.listdir(ruta_recetas)
-
-def Os():
-    #regresar ruta del sistema
-    pass
-
-def rutas(directorios, eliminar,Categoria_nueva(#para agregar automaticamente al dic)):
-    """
-    ruta = Path("C:\\Users\\HP\\PycharmProjects\\Python_Repox\\Code\\DIA6\\Recetas")
-    directorios = {receta: ruta}
-
-    SI NO ESTA:
-    Iterar y añadirla al directorio junto con el prefijo path, es decir
-    if not elemento startwith(path):
-        elemento + path
-
-    de modo que si entra la nueva categoria solamente entraria el nombre, y dentro de la funcion
-    se le añadiria receta:ruta al final solamente cambia el nombre final, de esta forma seria
-    mucho mas efectivo, asi podria tambien reutilizar la funcion para borrar categorias.
-    """
-pass
-
-
-# Borrador de funcionamiento.
 while True:
+    print(f"Numero de Recetas disponibles: [-{archivos_txt}-]")
     opcion = int(input(
-            "Que deseas realizar\n1-Leer Recetas\n"
-            "2-Crear Receta\n3-Crear categoria\n"
-            "4-Eliminar receta(s)\n"
-            "5-Eliminar Categoria\n"
-            "6-Salir\n"))
+        "Que deseas realizar\n1-Leer Recetas\n"
+        "2-Crear Receta\n3-Crear categoria\n"
+        "4-Eliminar receta(s)\n"
+        "5-Eliminar Categoria\n"
+        "6-Salir\n"))
 
     if opcion == 1:
+        print(f"Categorias disponibles -> [{" ".join(cate)}] ")
+
         print("Selecciona la categoria de tu interes para leer:")
-        print(f"Categorias disponibles ->  [{" ".join(cate)}] ")
+
         categoria = input("Selecciona escribiendo el nombre de la categoria: ")
 
-        # Verificar  si la categoria esta en los directorios
-        if categoria in directorios:
-            print(f"Recetas disponibles de la categoria: {categoria}")
-            archivos = os.listdir(directorios[categoria])
-            archivos_sinex = [Path(a).stem for a in archivos]
-            print(*archivos_sinex, sep=", ")
+        archivos = listar_dir(categoria)
 
-            # Si selecciono alguna categoria, mostrar las recetas disponibles en esa carpeta
-            leer = (input("¿Deesas leer alguna?: "))
+        archivos_sinex = [Path(a).stem for a in archivos]
 
-            if leer == "si":
-             opcion_leer = input("Escribe aqui cual deseas leer: ")
-             opcion_leer_ext = opcion_leer + ".txt" # colocar txt de nuevo con fines de busquda.
+        print(*archivos_sinex, sep=", ")
 
-             if opcion_leer_ext in archivos:
+        leer = (input("¿Deesas leer alguna?:(si-no) "))
+
+        if leer == "si":
+            opcion_leer = input("Escribe aqui cual deseas leer: ")
+            opcion_leer_ext = opcion_leer + ".txt"  # colocar txt de nuevo con fines de busquda.
+
+            if opcion_leer_ext in archivos:
                 print("Aqui tienes la receta de:", opcion_leer)
-                with open(directorios[categoria] / opcion_leer_ext, "r") as lec:
+                with open(ruta / categoria / opcion_leer_ext, "r") as lec:
                     print(lec.read())
             elif leer == "no":
                 continue
         else:
             print("Intenta de nuevo")
 
-
         # Este es el codigo para crear recetas.
     elif opcion == 2:
-        print("Estas son nuestras categorias disponibles")
         print(f"Categorias disponibles -> [{" ".join(cate)}] ")
         categoria2 = input("Escribe el nombre de la categoria donde te gustaria añadir tu receta: ")
 
-        # Verificar  si la categoria esta en los directorios
-        if categoria2 in directorios:
-            print(f"Aqui tienes las recetas disponibles de la categoria: '{categoria2}'.")
-            archivos2 = os.listdir(directorios[categoria2])
-            print(*archivos2, sep=", ")
+        # Verificar si la categoria está en los directorios
+        print(f"Aqui tienes las recetas disponibles de la categoria: '{categoria2}'.")
+        archivos2 = listar_dir(categoria2)
+        print(*archivos2, sep=", ")
         crear_rec = input("¿Te gustaria crear una receta aqui?:(si-no) ")
 
         if crear_rec == "si":
@@ -109,7 +81,7 @@ while True:
             if not nombre_receta.endswith(".txt"):
                 nombre_receta += ".txt"
 
-                with open(directorios[categoria2] / nombre_receta, "w") as c:
+                with open(ruta / categoria2 / nombre_receta, "w") as c:
                     print("Abajo escribe la receta (cuando termines, escribe 'FIN') ")
                     lineas = []
                     while True:
@@ -131,20 +103,35 @@ while True:
     if opcion == 3:
         print("Has elegido crear una categoria")
         NombreCategoria = input("Nombre de la categoria: ")
-        Categoria_nueva = ruta_recetas / NombreCategoria
+        Categoria_nueva = ruta / NombreCategoria
         # Crear la categoría si no existe
         Categoria_nueva.mkdir(parents=True, exist_ok=True)  # Crear directorio y evitar error si ya existe
         print(f"Categoria '{NombreCategoria}' creada exitosamente.")
 
     if opcion == 4:
-        print("has elegido eliminar una categoria");
+        print("Has seleccionado eliminar receta")
+        print(f"Categorias disponibles -> [{" ".join(cate)}] ")
+        categoria3 = input("Selecciona la categoria donde esta la receta: ")
+
+        # Verificar si la categoria está en los directorios
+        print(f"Aqui tienes las recetas disponibles de la categoria: '{categoria3}'.")
+        archivos3 = listar_dir(categoria3)
+        print(*archivos3, sep=", ")
+        eliminar_receta = input("¿Cual receta te gustaria eliminar? ")
+
+        rutita = Path("C:/Users/HP/PycharmProjects/Python_Repox/Code/DIA6/Recetas") / categoria3 / eliminar_receta
+        if rutita.exists():
+            rutita.unlink()  # nos sirve para eliminar
+            print("Se ha eliminado la receta", eliminar_receta)
+        else:
+            print("Al parecer no existe")
     if opcion == 5:
-        print("opcion en desarrollo")
+        print("Se esta trabajando")
     # os.rmdir('ruta') eliminar directorio util para el proyecto 6
     elif opcion == 6:
         print("Has salido")
-        exit() #Salir de todo el codigo
-
+        exit()
+        #Salir de todo el codigo
 
 """"
 Cuando el codigo este finalizado, 
