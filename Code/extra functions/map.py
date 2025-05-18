@@ -1,6 +1,4 @@
 #map funciona como una funcion que le aplica una funcion a un iterable
-
-
 def cuadrado(n):
     return n * n
 
