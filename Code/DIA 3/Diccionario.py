@@ -44,3 +44,15 @@ conteo = {vocal: cadena.count(vocal) for vocal in vocales}
 
 print(conteo)
 
+
+escuela = {}
+
+for i in range(1,3):
+  print("ingresa el nombre del estudiante")
+  alumno = input("Nombre: ")
+  for k in range(1,4):
+    calificaciones = float(input("Ingresa tus calificaciones: "))
+    escuela[alumno] = calificaciones
+
+for clave,valor in escuela.items():
+  print(clave, valor)

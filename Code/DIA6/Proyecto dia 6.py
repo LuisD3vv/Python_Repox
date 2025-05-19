@@ -1,6 +1,20 @@
 import os  # Manipular directorios y archivos del sistema.
 import shutil # poder eliminar y realizar operaciones de alto nivel
+from os import system
 from pathlib import Path  # Manipular y crear rutas
+
+
+"""
+Author Luis Alejandro Aguilar Soberanes
+
+Motivo- Rectetario
+
+
+-Uso, practicar y conocer las diferentes funciones para manipular archivos, ya sea creandolos o eliminandolos
+asi mismo crear rutas absolutas y relativas a ella.
+
+"""
+
 
 # Snippet para comprobar el sistema operativo
 if os.name == "nt":
@@ -20,8 +34,10 @@ for carpeta, subcarpeta, archivos in os.walk(ruta):
     archivos_txt += sum(1 for archivos in archivos if archivos.endswith(".txt"))
 """
 :Archivos
-el uso de dos 3 indices dentro de del ciclo, es debido a los requierimeintos de la propia funcion walk del modulo os, la cual nos pide (dirpath, dirnames, filenames)
-cada una es un nivel del directorio al cual queremos aplicarle la busque recursiva dentro de sus directorios y subdirectorios
+el uso de dos 3 indices dentro de del ciclo,
+es debido a los requerimientos de la propia funcion walk del modulo os,
+la cual nos pide (dirpath, dirnames, filenames)
+cada una es un nivel del directorio al cual queremos aplicarle la busqueda recursiva dentro de sus directorios y subdirectorios.
 """
 
 # Imprimiendo La primera parte
@@ -29,8 +45,8 @@ print(f"Bienvenido, La carpeta recetas se encuentra en la siguiente ruta [{ruta}
 print(f"Numero de Recetas disponibles inicialmente: [-{archivos_txt}-]")
 
 # Regresa un listado de las rutas que hay dentro de la carpeta padre Recetas
-cate = os.listdir(ruta)
-
+def listar_cate(ruta):
+    return os.listdir(ruta)
 
 def listar_dir(categoria):
     # Esta funcion toma como referencia la categoria que el usuario está buscando, para listarla y regresar el contenido.
@@ -46,36 +62,31 @@ while True:
         "4-Eliminar receta(s)\n"
         "5-Eliminar Categoria\n"
         "6-Salir\n"))
-
     if opcion == 1:
-        print(f"Categorias disponibles -> [{" ".join(cate)}] ")
-
+        print(listar_cate(ruta))
         categoria = input("Selecciona escribiendo el nombre de la categoria: ")
-
         archivos = listar_dir(categoria)
-
-        archivos_sinex = [Path(a).stem for a in archivos]
-
-        print(*archivos_sinex, sep=", ") # separar las opciones con comas
+        archivos_sinex = [Path(a).stem for a in archivos] # por cada elemento en archivos, se le quiatara el stem(extension jpg,pdf,txt)
+        print(*archivos_sinex, sep=", ") # Separar las opciones con comas
 
         leer = (input("¿Deesas leer alguna?:(si-no) "))
 
         if leer == "si":
             opcion_leer = input("Escribe aqui cual deseas leer: ")
-            opcion_leer_ext = opcion_leer + ".txt"  # colocar txt de nuevo con fines de busquda.
+            opcion_leer += ".txt"  # colocar txt de nuevo con fines de busquda.
 
-            if opcion_leer_ext in archivos:
-                print("Aqui tienes la receta de:", opcion_leer)
-                with open(ruta / categoria / opcion_leer_ext, "r") as lec:
+            if opcion_leer in archivos:
+                print("Aqui tienes la receta:", opcion_leer)
+                with open(ruta / categoria / opcion_leer, "r") as lec: # con la ruta, categoria y el archivo seleccionado previamente, lee este
                     print(lec.read())
             elif leer == "no":
                 continue
         else:
             print("Intenta de nuevo")
 
-        # Este es el codigo para crear recetas.
+    # Este es el codigo para crear recetas.
     elif opcion == 2:
-        print(f"Categorias disponibles -> [{" ".join(cate)}] ")
+        print(listar_cate(ruta))
         categoria2 = input("Escribe el nombre de la categoria donde te gustaria añadir tu receta: ")
 
         # Verificar si la categoria está en los directorios
@@ -119,7 +130,7 @@ while True:
 
     if opcion == 4:
         print("Has seleccionado eliminar receta")
-        print(f"Categorias disponibles -> [{" ".join(cate)}] ")
+        print(listar_cate(ruta))
         categoria3 = input("Selecciona la categoria donde esta la receta: ")
 
         # Verificar si la categoria está en los directorios
@@ -136,7 +147,7 @@ while True:
             print("Al parecer no existe")
     if opcion == 5:
         print("Has seleccionado eliminar una categoria")
-        print(f"Categorias disponibles -> [{" ".join(cate)}] ")
+        print(listar_cate(ruta))
         eliminarCategoria = input("Selecciona la categoria que deseas eliminar: ")
 
         eliminarCategoria_ruta = ruta / eliminarCategoria
@@ -163,4 +174,14 @@ Funciones y librerias utilizadas
 import os  # Manipular directorios y archivos del sistema.
 import shutil # poder eliminar y realizar operaciones de alto nivel, como borrar directorios con contenido
 from pathlib import Path  # Manipular y crear rutas
+
+shutil se usa para operaciones de alto nivel con archivos y directorios, como:
+
+    Copiar (shutil.copy, copytree)
+
+    Mover (shutil.move)
+
+    Borrar (shutil.rmtree)
+
+    Hacer archivos comprimidos (make_archive)
 """
