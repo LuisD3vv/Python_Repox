@@ -1,59 +1,101 @@
-Construir un programa que permita:
+from datetime import datetime # importar rutas
+from pathlib import Path # Crear rutas
+from hashlib import sha256 # Simular encriptacion
+import bcrypt # encriptacion real pues a la verga
+import os
 
-    Registrar nuevos usuarios con nombre de usuario y contraseña segura.
+ruta = Path.home() / "Python_Repox" / "Code"/ "DIA6"/ "Directorio de pruebas"/ "Registro de Usuarios" / "usuarios.txt"
 
-    Guardar los datos en un archivo (usuarios.txt).
+with open(ruta, "r") as archivo:
+    print(archivo.read())
+if Path.is_file(ruta):
+    print("hay un archivo")
 
-    Evitar registros duplicados (mismo nombre de usuario).
+total = 0
+with open (ruta,"r") as listar:
+        lista = listar.readlines()
+        for user in lista:
+            total += 1
 
-    Permitir que un usuario inicie sesión validando su contraseña.
+print(total)
 
-    Mostrar un mensaje si la contraseña es incorrecta o el usuario no existe.
+def registrar_usuario(usuario, contra):
+    encript = sha256(contra.encode())
+    fecha = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open(ruta,"a") as registrar:
+        registrar.write(f"User: {usuario} | Password: {encript} (Encrypted) | Date: {str(fecha)}\n\n")
+    ...
 
-🧩 Requisitos técnicos:
+def log_usuario(ruta,usuario,contra):
+    with open (ruta,"r") as verificar:
+        lista = verificar.readlines()
+        for user in lista:
+            if usuario == user:
+                print("Nombre de usuario ocupado")
+            
 
-    Guardar en el archivo:
+    ...
+def validar_contraseña_segura(contra):
+    mayusculas = any(c.isupper() for c in contra)
+    minusculas = any(c.islower() for c in contra)
+    numeros = any(c.isnumeric() for c in contra)
 
-    usuario:juan | hash:3f8d930a... | fecha:2025-05-17 15:42
 
-    Las contraseñas no deben guardarse en texto plano, sino como hash (una codificación no reversible).
+    if len(contra) < 8:
+        return "Al menos necesitas 8 caracteres"
 
-    El usuario puede elegir entre:
+    if not mayusculas:
+        print("❌ ingresa almenos una mayuscula")
+    else:
+        print("Mayuscula ✔")
 
-        [1] Registrarse
+    if not minusculas:
+        print(" ❌ ingresa al menos una minuscula")
+    else:
+        print("Minuscula ✔")
 
-        [2] Iniciar sesión
+    if not numeros:
+        print(" ❌ Ingresa al menos un numero")
+    else:
+        print("Numero ✔")
 
-        [3] Salir
+    if mayusculas and minusculas and numeros:
+        return "contraseña valida"
+    else:
+        return "contraseña invalida"
+        
+    """
+    solamente debe de aceptar la contraseña si es
+    mayor a ocho caracteres y contiene misnuculas 
+    y almenos una mayuscula
+    """
+    ...
 
-🧠 Lo que debes investigar y aplicar tú:
-Qué debes hacer	Qué buscar / investigar
-Guardar fecha y hora	datetime.now().strftime(...)
-Encriptar contraseña	Módulo hashlib, función sha256()
-Leer y escribir líneas en archivos	open(..., "r"), readlines(), split()
-Evitar usuarios repetidos	Leer archivo y buscar si el nombre ya existe
-Comparar hashes al hacer login	Convertir la contraseña ingresada al mismo hash
-💡 Tip:
 
-Hazlo modular: crea funciones como:
+while True:
+    print("Elige una opcion\n[1] Registrarse\n[2] Iniciar sesion\n[3] Salir")
+    opcion = int(input("opcion:"))
 
-    registrar_usuario()
+    if opcion == 1:
+        usuario = input("Ingresa el nombre de usuario: ")
+        while True:
+            contra = input("Ingresa tu contraseña: ")
+            correcto = validar_contraseña_segura(contra)
+            if correcto == "contraseña valida":
+                print("Registro exitoso")
+                registrar_usuario(usuario, contra)
+                break
+        
 
-    login_usuario()
 
-    validar_contraseña_segura()
+    elif opcion == 2:
+        print("Has elegido iniciar sesión")
+        credencial_1
 
-📌 Resultado esperado:
+    elif opcion == 3:
+        print("has Salido")
+        break
 
-Bienvenido al sistema
-1. Registrarse
-2. Iniciar sesión
-3. Salir
-Opción: 1
 
-Nombre de usuario: juan
-Contraseña: Hola1234
 
-✔ Registro exitoso
 
-...
