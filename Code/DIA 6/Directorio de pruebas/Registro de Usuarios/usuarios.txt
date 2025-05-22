@@ -1,0 +1,13 @@
+User: Raul | Password: b'$2b$12$6xHDGZMHWpqczBqxzqeqZeUsqghwnlt7vbhNypWLkXZeNampYEude' (Encrypted) | Date: 2025-05-21 18:47:29
+
+User: Luis | Password: b'$2b$12$mRjANxKGg49WD3/KEGy5ee65Gh9.HWhiTvF1nudHsW0XedCwcy.XG' (Encrypted) | Date: 2025-05-21 18:49:52
+
+User: Jose | Password: b'$2b$12$SqAZW/eRMKCuUAxSsuyYouzLwY9SGce9fldb4HrHWdcSCAMZ1krze' (Encrypted) | Date: 2025-05-21 18:53:14
+
+User: Luis | Password: b'$2b$12$WPrK/f9bPwUxTcN8rgCn1OA7VQ./kPrn3IEs7.NYhVRGCMSyI.W.S' (Encrypted) | Date: 2025-05-21 18:54:45
+
+User: Luis | Password: b'$2b$12$GWVKal7L.4pvx38W/4f5Nuq1R/W0DHny14ucpZ4rw1v/4kLDDj5L2' (Encrypted) | Date: 2025-05-21 19:10:46
+
+User: Luis | Password: b'$2b$12$GivcznxqBlcphVeYV0KwaOmKHkYKnDZDK2BfV1vDAURFpR5BWE5L.' (Encrypted) | Date: 2025-05-21 19:30:41
+
+User: Luisito | Password: b'$2b$12$9s7p2WGEPlZuf0KYtuaRrOFuRAQfY.F1mTM.LCZXZVIuCKp28Sb3m' (Encrypted) | Date: 2025-05-21 19:32:41
