@@ -1,2 +1,0 @@
-el dia de hoy, se termino el proyecto del dia 6, el cual consistia en hacer un recetario con
-varias opciones multiples que nos harian utilziar las diferentes funciones de path y os
