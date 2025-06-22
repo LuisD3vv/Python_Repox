@@ -1,0 +1,107 @@
+Ejercicio 1: Creación de una clase simple
+Objetivo:
+Crear una clase llamada Persona que tenga los siguientes atributos:
+
+nombre
+
+edad
+
+Añadir un método saludar() que imprima un saludo con el nombre de la persona.
+
+Ejercicio 2: Métodos adicionales
+Objetivo:
+Crear una clase Círculo que calcule el área y el perímetro de un círculo a partir de su radio.
+
+Instrucciones:
+Crear un constructor que tome el radio como parámetro.
+
+Añadir dos métodos:
+
+calcular_area(): Devuelve el área del círculo.
+
+calcular_perimetro(): Devuelve el perímetro del círculo.
+
+Fórmulas:
+Área: 
+𝐴
+=
+𝜋
+𝑟
+2
+A=πr 
+2
+ 
+
+Perímetro: 
+𝑃
+=
+2
+𝜋
+𝑟
+P=2πr
+
+Ejercicio 3: Herencia
+Objetivo:
+Crear una clase Animal y luego una clase hija llamada Perro que herede de Animal.
+
+Instrucciones:
+Crear la clase Animal con un método hacer_sonido() que imprima un mensaje genérico.
+
+Crear una clase Perro que herede de Animal y sobrescriba el método hacer_sonido() para que imprima algo específico para un perro (por ejemplo, "El perro ladra").
+
+Crear una instancia de Perro y llamar al método hacer_sonido().
+
+Ejercicio 4: Uso de métodos estáticos y de clase
+Objetivo:
+Crear una clase llamada CuentaBancaria con métodos estáticos y de clase.
+
+Instrucciones:
+Crear un atributo de clase interes_anual.
+
+Añadir un método de clase que permita modificar el valor de interes_anual.
+
+Añadir un método estático que calcule el interés anual sobre una cantidad dada.
+
+Ejercicio 5: Encapsulamiento (uso de getters y setters)
+Objetivo:
+Crear una clase Producto con los atributos nombre y precio, pero el precio debe ser accesible solo a través de getter y setter.
+
+Instrucciones:
+Crear la clase Producto con los atributos nombre y precio.
+
+Utilizar getter y setter para el atributo precio de modo que no se pueda modificar directamente fuera de la clase, sino a través del setter.
+
+El getter debe devolver el precio y el setter debe asegurarse de que el precio no sea negativo.
+
+Ejercicio 6: Polimorfismo
+Objetivo:
+Crear una clase Vehiculo y dos clases hijas, Coche y Bicicleta, que implementen un método común mover(), pero cada una con un comportamiento diferente.
+
+Instrucciones:
+Crear la clase Vehiculo con un método mover().
+
+Crear una clase hija Coche que sobrescriba mover() con un comportamiento específico.
+
+Crear una clase hija Bicicleta que sobrescriba mover() con un comportamiento específico.
+
+Llamar al método mover() para ambas clases.
+
+Ejercicio 7: Clases con listas y diccionarios
+Objetivo:
+Crear una clase Equipo que contenga una lista de jugadores, y cada jugador tiene un diccionario con su nombre y posición.
+
+Instrucciones:
+Crear la clase Equipo que tenga un atributo de instancia jugadores (una lista).
+
+Crear un método agregar_jugador(nombre, posicion) que agregue un diccionario con nombre y posicion a la lista de jugadores.
+
+Crear una instancia de Equipo y agregar algunos jugadores.
+
+Mostrar la lista de jugadores del equipo.
+
+Consejos adicionales para practicar:
+Reescribe el código: Una excelente manera de aprender es escribir el código varias veces, cambiando cosas y probando nuevas ideas.
+
+Experimenta con los tipos: Cambia los atributos de las clases, prueba diferentes tipos de datos y observa cómo se comportan.
+
+Lee documentación: Familiarízate con la documentación oficial de Python, especialmente con las clases y sus métodos.
