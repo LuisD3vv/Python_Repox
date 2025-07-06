@@ -1,11 +1,8 @@
 # Aqui estudiaremos todos los metodos de lso string
 Palabra = "Hola mundo"
 
-
 print(Palabra[::-1])
 print(f" {Palabra}")
-
-
 
 for i in Palabra:
     print(i, end = " ")
@@ -29,5 +26,3 @@ if Palabra.startswith("Hola"):
     print("si")
 elif Palabra.endswith("Hola"):
     print("si")
-
-
