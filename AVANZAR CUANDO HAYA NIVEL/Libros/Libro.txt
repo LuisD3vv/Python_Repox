@@ -1,0 +1,10 @@
+Titulo: El retrato de dorian grey | Autor: Oscar wilde | Fecha: 1950-05-05\ | ISBN: 978-715-942-537-0
+Titulo: Biblia | Autor: Varios | Fecha: 2000-00-00 | ISBN: 978-893-674-590-5
+Titulo: Luis | Autor: Luis | Fecha: 2004-09-09 | ISBN: 978-769-324-496-4
+Titulo: Luis | Autor: Luis | Fecha: 200-09-09 | ISBN: 978-171-960-422-8
+Titulo: Luis | Autor: Luis | Fecha: 222-04-31 | ISBN: 978-560-788-373-7
+Titulo: 2 | Autor: 2 | Fecha: 01-01-2004 | ISBN: 978-295-120-856-0
+Titulo: Calculo | Autor: Calculo | Fecha: 01-01-2003 | ISBN: 978-220-590-803-2
+Titulo: Kirby | Autor: Kirby | Fecha: 20-07-2001 | ISBN: 978-855-645-48-5
+Titulo: Algebra  | Autor: Algebra  | Fecha: 01-01-2903 | ISBN: 978-388-613-7-4
+Titulo: Cincuenta sombras de gray | Autor: Cincuenta sombras de gray | Fecha: 01-09-2023 | ISBN: 978-476-336-787-9
