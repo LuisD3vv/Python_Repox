@@ -2,25 +2,41 @@ import os
 # La libreria
 from pathlib import Path
 
-# ruta = os.path.basename()
-# ruta = os.path.dirname()
-# ruta = os.path.split(ruta)
-# ruta = os.path.isfile()
-# ruta = os.path.isdir()
-# ruta = os.path.exist()
-# ruta = os.listdir()
-# ruta = os.makedirs()
-# ruta = os.rename()
-# ruta = os.getcwd()
-# ruta = os.chdir("/home/lissandro/Descargas/hombres.csv") cambiar de directorio
-# ruta = os.makedirs() crear directorio util para el proyecto 6
-# ruta = os.path.split()
-# os.rmdir('ruta') eliminar directorio util para el proyecto 6
-#os.stat()
-# otro_archivo = open('prueba.txt')
+"""
+Ahora vamos a practicar un poco de las prints utilizando el modulo os
+
+"""
+carpeta = Path("Udemy/DIA 6 - Rutas y gestion archivos/curso recurses/mi_archivo.txt")  # print de path
+
+# El padre mas cercano a la carpeta o archivo
+print(f"El nombre de este directorio/archivo es: {os.path.basename(carpeta)}")
+# El nombre del directorio padre, es decir un nivel arriba del directorio que estamos, es util si pensamos trabajar con rutas relativas
+print(f"El padre es: {os.path.dirname(carpeta)}")
+# Separar la ruta, en una tupla, se convierte una tupla de strings, 
+t = os.path.split(carpeta)
+print(type(t))
+print(f"Yo separo la ruta papus{os.path.split(carpeta)}")
+# Si la ruta es una fila
+print(os.path.isfile(carpeta))
+# Si la ruta es un directorio
+print(os.path.isdir(carpeta))
+# Si la ruta existe
+print(os.path.exists(carpeta))
+# Si la ruta es un directorio, iterarlo
+# print(os.listdir(carpeta)) # Solo para listar carpetas.
+# Crear directorios
+#print(os.makedirs())
+# Renombrar el archivo
+#print(os.rename())
+# Imprimir la ruta
+print(os.getcwd())
+# printos.chdir("/home/lissandro/Descargas/hombres.csv") cambiar de directorio
+#print(os.path.split())
+#os.rmdir('print') #eliminar directorio util para el proyecto 6
+print(os.stat(carpeta))
+otro_archivo = open('prueba.txt')
 
 
-carpeta = Path('/home/lissandro/') / 'ejemplo udemy de rutas'  # ruta de path
 
 mi_archivo = open(carpeta)
 print((mi_archivo.read()))

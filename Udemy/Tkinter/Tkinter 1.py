@@ -1,7 +1,5 @@
 import tkinter as tk
 
-from DIA1.primer_proyecto import resultado
-
 
 # ______________________________
 

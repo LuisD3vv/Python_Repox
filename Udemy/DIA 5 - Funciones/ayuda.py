@@ -10,9 +10,12 @@ print(dic)
 a = ",:_#,,,,,,:::____##Pyt%on_ _Total,,,,,,::#"
 
 # este metodo funiciona para elimiar caracteres especificos, como espacios en blanco
-b = a.lstrip(", : % _ # ")
+b = a.strip(", : % _ # ")
+for elemento in b:
+    if elemento == "%":
+        elemento = "h"
+    print(b)
 
-print(b)
 
 # Ejercicio 3
 

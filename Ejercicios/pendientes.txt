@@ -1,67 +1,3 @@
-Ejercicio 1: Creación de una clase simple
-Objetivo:
-Crear una clase llamada Persona que tenga los siguientes atributos:
-
-nombre
-
-edad
-
-Añadir un método saludar() que imprima un saludo con el nombre de la persona.
-
-Ejercicio 2: Métodos adicionales
-Objetivo:
-Crear una clase Círculo que calcule el área y el perímetro de un círculo a partir de su radio.
-
-Instrucciones:
-Crear un constructor que tome el radio como parámetro.
-
-Añadir dos métodos:
-
-calcular_area(): Devuelve el área del círculo.
-
-calcular_perimetro(): Devuelve el perímetro del círculo.
-
-Fórmulas:
-Área: 
-𝐴
-=
-𝜋
-𝑟
-2
-A=πr 
-2
- 
-
-Perímetro: 
-𝑃
-=
-2
-𝜋
-𝑟
-P=2πr
-
-Ejercicio 3: Herencia
-Objetivo:
-Crear una clase Animal y luego una clase hija llamada Perro que herede de Animal.
-
-Instrucciones:
-Crear la clase Animal con un método hacer_sonido() que imprima un mensaje genérico.
-
-Crear una clase Perro que herede de Animal y sobrescriba el método hacer_sonido() para que imprima algo específico para un perro (por ejemplo, "El perro ladra").
-
-Crear una instancia de Perro y llamar al método hacer_sonido().
-
-Ejercicio 4: Uso de métodos estáticos y de clase
-Objetivo:
-Crear una clase llamada CuentaBancaria con métodos estáticos y de clase.
-
-Instrucciones:
-Crear un atributo de clase interes_anual.
-
-Añadir un método de clase que permita modificar el valor de interes_anual.
-
-Añadir un método estático que calcule el interés anual sobre una cantidad dada.
-
 Ejercicio 5: Encapsulamiento (uso de getters y setters)
 Objetivo:
 Crear una clase Producto con los atributos nombre y precio, pero el precio debe ser accesible solo a través de getter y setter.
@@ -105,3 +41,19 @@ Reescribe el código: Una excelente manera de aprender es escribir el código va
 Experimenta con los tipos: Cambia los atributos de las clases, prueba diferentes tipos de datos y observa cómo se comportan.
 
 Lee documentación: Familiarízate con la documentación oficial de Python, especialmente con las clases y sus métodos.
+
+
+Practicar conceptos nuevos
+
+-modulos
+-manejo de errores
+- pylint
+-testeos
+-OOP
+
+
+hacer un proyecto grnande que incluya todo eso
+
+# mejorar logica de proyectos pasados con logica actual
+
+Repasar logica de filtrado y ejercicios cortos

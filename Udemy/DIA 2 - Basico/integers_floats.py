@@ -1,8 +1,8 @@
 mi_numero = 5.8 + 5
 print(mi_numero)
 
-
-print(type(mi_numero))  # type es para saber que tipo de dato es
+print(type(mi_numero))  # type es para saber que tipo de dato es 
+print(repr(mi_numero))
 
 # ---------------
 

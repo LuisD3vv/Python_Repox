@@ -1,6 +1,4 @@
-from random import randint
-from random import randint, random
-from random import shuffle
+from random import *
 
 # Lista Inicial
 palitos = ['-', '--', '---', '----']
@@ -12,8 +10,8 @@ def mezclar(lista):
     shuffle(lista)
     return lista
 
-
 # pedir intento
+
 def probar_suerte():
     intento = ' '
 

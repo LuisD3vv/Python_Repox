@@ -1,16 +1,20 @@
 """
-    Que son los loop for
-    Un bucle for en Python es una estructura de control que se utiliza para iterar sobre una secuencia (como una lista, una tupla, un diccionario, una cadena de caracteres, etc.)
-    y ejecutar un bloque de código una vez para cada elemento de esa secuencia.
-    La sintaxis general de un bucle for en Python es la siguiente:
+Que son los loop for
+Un bucle for en Python es una estructura de control 
+que se utiliza para iterar sobre una secuencia 
+(como una lista, una tupla, un diccionario, una cadena de caracteres, etc.)
+y ejecutar un bloque de código una vez para cada elemento de esa secuencia.
+La sintaxis general de un bucle for en Python es la siguiente:
 
-    for elemento in secuencia:
-    Bloque de código a ejecutar para cada elemento
+for elemento in secuencia:
+Bloque de código a ejecutar para cada elemento
 
-    Donde:
+Donde:
 
-    elemento es una variable que toma el valor de cada elemento en la secuencia en cada iteración del bucle.
-    secuencia es la secuencia sobre la que se está iterando, como una lista, tupla, rango, cadena de caracteres, etc.
+elemento es una variable que toma el valor
+de cada elemento en la secuencia en cada iteración del bucle.
+secuencia es la secuencia sobre la que se está iterando
+como una lista, tupla, rango, cadena de caracteres, etc.
 """
 numeros = [1, 2, 3, 4, 5]
 

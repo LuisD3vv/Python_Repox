@@ -1,9 +1,10 @@
 from datetime import datetime # importar modulo de fecha y tiempo.
 from pathlib import Path # Crear rutas
-#from hashlib import sha256 # Simular encriptacion
+#from hashlib import sha256 # Simular encriptacion 
+#Sha256 es el algoritmo de encriptacion a la verga mi perro
 import bcrypt # encriptacion real pues a la verga
 
-ruta = Path("Code/DIA 6/Directorio de pruebas/Registro de Usuarios/usuarios.txt")
+ruta = Path("Udemy/DIA 6 - Rutas y gestion archivos/Directorio de pruebas/Registro de Usuarios/usuarios.txt")
 print(ruta)
 #Validar contraseña
 def validar_contraseña_segura(contra):
@@ -102,10 +103,6 @@ while True:
                     registrar_usuario(usuario, contra)
                     print("Usuario registrado con exito")
                     break
-         
-                    
-                
-
     elif opcion == 2:
         print("Has elegido iniciar sesión")
         while True:

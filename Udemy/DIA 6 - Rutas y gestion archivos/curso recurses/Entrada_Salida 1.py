@@ -3,14 +3,14 @@
 """
 'r' sirve para leer el archivo e imprimir sus lineas
 "a" sirve para escribir al ultimo del elemento, util para hacer logs
-"w" sirve para modificar o crear un archivo.
+"w" sirve para modificar o crear un archivo. si no existe al momento de crearla, este lo creara automaticamente
 """
 lectura = open("../prueba.txt", 'r')
 for l in lectura:
     print(l)
 print(lectura.read(), end=" ")
 
-lectura.close()  # buena practica.
+lectura.close()  # buena practica. / aparte necesaria jajaj
 
 print("con open \n")
 # Otra forma que cierra automaticamente

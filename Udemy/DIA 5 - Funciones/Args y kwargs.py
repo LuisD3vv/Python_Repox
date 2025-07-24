@@ -1,4 +1,3 @@
-
 def suma(*args):
     total = 0
 
@@ -6,9 +5,7 @@ def suma(*args):
         total += arg
     return total
 
-
 print(suma(899, 343, 4545, 44332, 454, 2354, 788, 766, 7))
-
 
 def suma_cuadrados(*args):
     total = 0
@@ -16,16 +13,13 @@ def suma_cuadrados(*args):
         total += arg ** 2
     return total
 
-
 print(suma_cuadrados(5, 10, 20, 50))
-
 
 def valor_absoluto(num):
     if num < 0:
         return -num  # Convierte a positivo
     else:
         return num  # Mantiene el valor como está
-
 
 def suma_absolutos(*args):
     total = 0
@@ -78,9 +72,9 @@ def lista_atributos(**kwargs):
 print(lista_atributos(a= 5, g = 4, b=4))
 
 def describir_persona(nombre, **kwargs):
-       print(f"Características de {nombre}:")
-       for ojos, pelo in kwargs.items():
-           print(f"{ojos} = {pelo}")
+    print(f"Características de {nombre}:")
+    for ojos, pelo in kwargs.items():
+        print(f"{ojos} = {pelo}")
 
 
 kwargs = {'color_ojos': 'Cafe', 'color_pelo': 'Cafe oscuro'}
