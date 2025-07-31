@@ -23,9 +23,11 @@ def creacion_isbn():
     id_publicacion = randint(0,998)
     digito_control = randint(0,10)
     isbn = str(ean) + "-" + str(country) + "-" + str(editorial)+ "-" + str(id_publicacion)+ "-" + str(digito_control)
-    print(type(isbn))
     return isbn
+
+def generar_id():
+    id_gen = randint(1, 999)
+    return id_gen
 
 # Posteriormente colocarle el isbn por delante ISBN 000-000-00000-0-0
 
-print(creacion_isbn())

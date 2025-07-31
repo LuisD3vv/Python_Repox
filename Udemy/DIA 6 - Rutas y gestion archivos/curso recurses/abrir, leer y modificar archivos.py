@@ -14,7 +14,7 @@ ruta = Path("Udemy\\DIA 6 - Rutas y gestion archivos\\Directorio de pruebas\\nom
 las dobles barras son para escapar su significado literal
 """
 
-lectura = open(ruta,"r")
+lectura = open(ruta, "r")
 
 #devuelve una lista
 print(lectura.readlines())
@@ -30,7 +30,7 @@ lectura.close()
 
 directorio_actual = os.getcwd()
 
-directorio_nombre = os.path.join(directorio_actual,)
+directorio_nombre = os.path.join(directorio_actual)
 print(directorio_nombre)
 print(directorio_actual)
 

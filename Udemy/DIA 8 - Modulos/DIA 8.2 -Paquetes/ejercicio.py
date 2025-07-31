@@ -7,5 +7,5 @@ suma_y_resta.suma(20,90)
 
 from paquete_luis.Subpaquete import saludo
 
-#saludo desde el submodulo subpaquete
+#saludo desde el submodulo
 saludo.hola()
