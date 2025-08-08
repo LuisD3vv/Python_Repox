@@ -1,4 +1,3 @@
-
 # importar la libreria
 import sqlite3
 # crear la coneccion

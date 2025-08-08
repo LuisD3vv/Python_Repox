@@ -39,11 +39,6 @@ Ejercicios para matar el tiempo
     Buscar palabras clave
     Escribí una función que busque si cierta palabra aparece en un archivo. Retorná las líneas que la contienen.
 
-    Guardar diccionario
-    Tenés un diccionario como {"python": 3, "java": 5}. Guardalo en un archivo línea por línea:
-    python: 3
-    java: 5
-
 🧩 3. Funciones
 
     Generador de contraseñas

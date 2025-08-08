@@ -4,13 +4,11 @@
 # print(repr(nueva_cadena))
 # print(nueva_cadena)
 
-
 # simbolos = "***____Hola===\n"
 
 # sin_simbolos = simbolos.strip("*_=\n")
 # print(repr(sin_simbolos))
 # print(sin_simbolos)
-
 
 # nombre = "nombre:juan|edad:20|correo:juan@mail.com"
 
