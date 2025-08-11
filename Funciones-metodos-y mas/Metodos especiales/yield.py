@@ -40,7 +40,7 @@ for n in generadorCuadrado(20):
 
 
 def Fibonacci(n):
-
+	...
 
 
 for f in Fibonacci(10):
