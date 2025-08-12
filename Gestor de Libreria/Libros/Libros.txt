@@ -12,3 +12,6 @@ Titulo: Luisito | Autor: Juan acosta | Fecha: 05-05-2004 | ISBN: 978-867-813-335
 Titulo: Harry Potter | Autor: JK Rowling | Fecha: 01-03-1991 | ISBN: 978-400-885-565-8 | Editorial: Porrua
 Titulo: La niebla | Autor: Stephen King | Fecha: 00-00-2022 | ISBN: 978-302-291-813-10 | Editorial: Papua
 Titulo: Penes sagrientos | Autor: Yo we | Fecha: 01-01-2000 | ISBN: 978-176-830-532-0 | Editorial: aghgh
+Titulo: sddssd | Autor: dssdsdsdds | Fecha: 05-05-2004 | ISBN: 978-294-399-857-6 | Editorial: sdsddssdd
+Titulo: Biblia | Autor: Varios | Fecha: 05-05-2004 | ISBN: 978-273-741-24-0 | Editorial: Vaticano
+Titulo: Rockoloco | Autor: Eduardo el punal | Fecha: 21-01-2001 | ISBN: 978-826-627-65-0 | Editorial: Panfilomeno

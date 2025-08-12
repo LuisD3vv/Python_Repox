@@ -3,7 +3,7 @@ import random, time
 dice = [1, 2, 3, 4, 5, 6]
 
 # K es el número de resultados de esa lista
-#print(random.choices(dice, k=3))
+#  print(random.choices(dice, k=3))
 
 def slot(result):
 	"""Una manera elegante de contar resultados."""
@@ -13,6 +13,8 @@ def slot(result):
 		return "Gracias por jugar"
 
 # Los Prints van antes de time.sleep...
+
+
 intentos = 0
 print("Loading...")
 time.sleep(3)
@@ -20,7 +22,7 @@ print("Ready!")
 while True:
 	try:
 		symbols = ['🍒', ' 🍇', '🍉', '7']
-		#prueba = ['7','7','7']
+		#  prueba = ['7','7','7']
 		result = random.choices(symbols, k=3)
 		print(*result, sep=" | ")
 		if slot(result) == "jackpot":

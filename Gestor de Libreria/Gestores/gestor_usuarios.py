@@ -2,11 +2,14 @@ import sqlite3
 from utils import generar_id
 from pathlib import Path
 
-ruta_usuario = Path("../Usuarios/log_usuarios_id.txt")
+ruta_usuario = Path("/home/lissandro/Python_Repox/Gestor de Libreria/Usuarios/log_usuarios_id.txt")
+if ruta_usuario.exists():
+    print("La ruta si existe")
+else:
+    print("No existe la ruta")
 class Usuario:
     """Clase para definir la estructura de cada usuario"""
-
-    def __init__(self, nombre, apellido, edad,user_id):
+    def __init__(self, nombre, apellido, edad, user_id):
         self.nombre = nombre
         self.apellido = apellido
         self.edad = edad
@@ -15,25 +18,28 @@ class Usuario:
     def mostrar_info_usuario(self):
         ...
 
-    #def __del__(self, nombre_eliminar):
+    #  def __del__(self, nombre_eliminar):
 
     def conocer_id(self, nombre_user, apellido_user):
         ...
 
     def ingresar_usuario_DB(self):
-        try:
-            conn = sqlite3.connect("../Usuarios/Usuarios.db")
+       """
+        Funcion para manejar el ingreso de usuarios a una base de datos
+        utilizando el with para no tener que cerrar manualment
+        que eso normalmente cuausa errores si la apertura no
+        funciona
+       """
+       try:
+         with sqlite3.connect("/home/lissandro/Python_Repox/Gestor de Libreria/Usuarios/Usuarios.db") as conn:
             cur = conn.cursor()
-            cur.execute("create table Usuariodb(nombre,apellido,edad,user_id)")
-            cur.execute("insert into Usuariodb(nombre,apellido,edad,user_id) values (?,?,?,?)", (self.nombre, self.apellido, self.edad, self.user_id))
+            cur.execute("CREATE TABLE IF NOT EXISTS Usuariodb(nombre,apellido,edad,user_id)")
+            cur.execute("INSERT INTO Usuariodb(nombre,apellido,edad,user_id) VALUES (?,?,?,?)", (self.nombre, self.apellido, self.edad, self.user_id))
             conn.commit()
-        except sqlite3.Error as error:
-            print("Ha ocurrido un error en alguna parte",error)
-        finally:
-            conn.close()
-
+       except sqlite3.Error as error:
+            print("Ha ocurrido un error =>", error)
 # Declarar variables para poder colocar rangos de edad.
-#Getter
+#  Getter
 @property
 def nombre(self):
     return self._nombre
@@ -68,16 +74,17 @@ def edad(self, edad):
             self._edad = edad
 
 
-def ingresar_usuario(nombre,apellido,edad):
+def ingresar_usuario(nombre, apellido, edad):
     userid = generar_id()
     genericuser = Usuario(nombre, apellido, edad, userid)
-    if isinstance(genericuser,Usuario):
+    if isinstance(genericuser, Usuario):
         genericuser.ingresar_usuario_DB()
         print("Usuario creado con exito")
-        with open(ruta_usuario, "a") as user_log:
-            user_log.writelines(f"Nombre: {nombre} | Apellido: {apellido} | Edad: {edad} | ID: {userid}\n")
-    else:
-        print(f"Hubo un error, intenta de nuevo\nAun asi se creo el id {Userid}")
+        try:
+            with open(ruta_usuario, "a") as user_log:
+                user_log.writelines(f"Nombre: {nombre} | Apellido: {apellido} | Edad: {edad} | ID: {userid}\n")
+        except FileNotFoundError:
+            print("Asegurate de que la ruta o el archivo existan.")
 
 def buscar_usuario():
     ...
@@ -86,6 +93,6 @@ def buscar_usuario():
 def listar_usuarios():
     ...
 
-#Usar map() para mostrar títulos en mayúscula
+#  Usar map() para mostrar títulos en mayúscula
 
-#Usar filter() para buscar por año
+#  Usar filter() para buscar por año

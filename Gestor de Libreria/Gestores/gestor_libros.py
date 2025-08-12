@@ -1,34 +1,32 @@
 import time
-
 from utils import creacion_isbn
 from pathlib import Path
 import sqlite3
 
 # No usar mkdir cuando la ruta termine en un archivo.
-#Crear el archivo si no extiste
-rutaFolder = Path("../Libros")
+#  Crear el archivo si no extiste
+rutaFolder = Path("/home/lissandro/Python_Repox/Gestor de Libreria/Libros")
+# es un directorio
 
-
-def verificar_ruta(ruta):
-	"""
-    Funcion para verificar si existe la ruta, es decir el directorio libros
-    y el archivo donde se van a crear, en caso de que no, se crearan
-    """
-	if ruta.exists():
-		print("Ruta existente \U0001F54A.")
-	elif not ruta.exists():
-		print("Carpeta no encontrada")
-		ruta.mkdir(parents=True, exist_ok=True)
-		# si alguna carpeta del camino no existe se crea con parents = true, y con exist, si el archhivo
-		# ya existe no se lanza error
-		time.sleep(2)
-		print("Creando carpeta...")
-		time.sleep(2)
-		print("Carpeta creada")
-		# Crear archivo
+def puta_ruta():
+	try:
+		if rutaFolder.exists():
+			print("Ruta existente \U0001F54A.")
+	except FileNotFoundError:
+			print("Carpeta no encontrada")
+			rutaFolder.mkdir(parents=True, exist_ok=True)
+			# si alguna carpeta del camino no existe se crea con parents = true, y con exist, si el archhivo
+			# ya existe no se lanza error
+			time.sleep(2)
+			print("Creando carpeta...")
+			time.sleep(2)
+			print("Carpeta creada con exito")
 	archivo = rutaFolder / "Libros.txt"
 	archivo.touch(exist_ok=True)
 	return archivo
+# Crear archivo
+
+
 
 
 class Libro:
@@ -49,7 +47,6 @@ class Libro:
 	Crear opcion por si no existe la base de datos
 	"""
 
-
 	def __str__(self):
 		return f"Titulo: {self.titulo} | Autor: {self.autor} | Fecha: {self.detalles['fecha']} | ISBN: {self.detalles['isbn']} | Editorial: {self.detalles['editorial']}"
 
@@ -58,19 +55,21 @@ class Libro:
 		Ingresar datos a la base de datos en lugar de a un texto
 		"""
 		try:
-			conn = sqlite3.connect("../Libros/Libros.db")
-			cur = conn.cursor()
-			cur.execute("Insert into DetalleLibro(titulo,autor,fecha,isbn,genero,editorial) values (?,?,?,?,?)", (self.titulo,self.autor,self.detalles['fecha'],self.detalles['isbn'],self.detalles['genero'],self.detalles['editorial']))
-			conn.commit()
+			with sqlite3.connect("/home/lissandro/Python_Repox/Gestor de Libreria/Libros/Libros.db") as conn:
+				cur = conn.cursor()
+				cur.execute("CREATE TABLE IF NOT EXISTS DetalleLibro (titulo,autor,fecha,isbn,genero,editorial)")
+				cur.execute(
+					"Insert into DetalleLibro (titulo, autor, fecha, isbn, genero, editorial) values (?, ?, ?, ?, ?, ?)",
+					(self.titulo, self.autor, self.detalles['fecha'], self.detalles['isbn'],
+					 self.detalles['genero'], self.detalles['editorial']))
+				conn.commit()
 		except sqlite3.Error as error:
-			print("Ha ocurrido un error en alguna parte",error)
-		finally:
-			conn.close()
+			print("Ha ocurrido un error en alguna parte", error)
 
 	def buscar_libro(self):
 		...
 
-	#Property es para obtener los datos almacenados en la variable y regresarlo de manera oculta, tambien es una forma diferente dela habitual al getter
+	#  Property es para obtener los datos almacenados en la variable y regresarlo de manera oculta, tambien es una forma diferente dela habitual al getter
 	@property
 	def titulo(self):
 		return self._titulo
@@ -128,25 +127,20 @@ def agregar_libro(titulo, autor, fecha, genero, editorial):
 		"genero": genero,
 		"editorial": editorial
 	})
-
 	# verificar que todas las opciones sean correctas antes de crear el objeto
 	objeto = Libro(titulo=titulo_libro, autor=autor_libro, **detalle)
 	# el asterico en detalle, es un desempaquetado especial de diccionario clave, valor, si donde queremos sobreescribir los mismos datos, se nombraran como tal
-	# es decir, se acoplaran solos
-	ruta_libro = verificar_ruta(rutaFolder)
-	if isinstance(objeto,Libro):
-		objeto.ingresar_libro_DB()
-		with open(ruta_libro, "a") as lerbo:
+	# es decir, se acoplaran solos a los elementos disponibles
+	libro_actual = Path("/home/lissandro/Python_Repox/Gestor de Libreria/Libros/Libros.txt")
+	if isinstance(objeto, Libro):
+		objeto.ingresar_libro_DB() # si el objeto se creo, se ingresa a la database
+		with open(libro_actual, "a") as lerbo:
 			try:
 				lerbo.writelines(str(objeto) + "\n")
 			except FileNotFoundError:
-				print(f"No se encontro el archivo final de la ruta {ruta_libro}")
+				print(f"No se encontro el archivo final de la ruta {libro_actual}")
 			else:
 				print("EL libro se anadio exitosamente")
-	else:
-		print("culo")
-
-
 	return objeto
 
 # libro_nuevo = agregar_libro()
