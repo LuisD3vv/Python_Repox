@@ -15,3 +15,5 @@ Titulo: Penes sagrientos | Autor: Yo we | Fecha: 01-01-2000 | ISBN: 978-176-830-
 Titulo: sddssd | Autor: dssdsdsdds | Fecha: 05-05-2004 | ISBN: 978-294-399-857-6 | Editorial: sdsddssdd
 Titulo: Biblia | Autor: Varios | Fecha: 05-05-2004 | ISBN: 978-273-741-24-0 | Editorial: Vaticano
 Titulo: Rockoloco | Autor: Eduardo el punal | Fecha: 21-01-2001 | ISBN: 978-826-627-65-0 | Editorial: Panfilomeno
+Titulo: Tales from the pizzaplex | Autor: Scott Cawthonn | Fecha: 31-10-2000 | ISBN: 978-591-336-47-6 | Editorial: Mexico
+Titulo: Harry potter | Autor: JK Rowling | Fecha: 19-10-1997 | ISBN: 978-683-459-623-3 | Editorial: Patria

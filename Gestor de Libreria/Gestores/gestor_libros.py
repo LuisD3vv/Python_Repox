@@ -5,30 +5,30 @@ import sqlite3
 
 # No usar mkdir cuando la ruta termine en un archivo.
 #  Crear el archivo si no extiste
-rutaFolder = Path("/home/lissandro/Python_Repox/Gestor de Libreria/Libros")
-# es un directorio
+rutaGen = Path("/home/lissandro/Python_Repox/Gestor de Libreria/extra/GestorGeneral.db")
+ruta_escritura = Path("/home/lissandro/Python_Repox/Gestor de Libreria/logs/Libros.txt")
 
+# es un directorio
+"""
 def puta_ruta():
 	try:
-		if rutaFolder.exists():
+		if rutaGen.exists():
 			print("Ruta existente \U0001F54A.")
 	except FileNotFoundError:
-			print("Carpeta no encontrada")
-			rutaFolder.mkdir(parents=True, exist_ok=True)
-			# si alguna carpeta del camino no existe se crea con parents = true, y con exist, si el archhivo
-			# ya existe no se lanza error
-			time.sleep(2)
-			print("Creando carpeta...")
-			time.sleep(2)
-			print("Carpeta creada con exito")
-	archivo = rutaFolder / "Libros.txt"
+		print("Carpeta no encontrada")
+		rutaGen.mkdir(parents=True, exist_ok=True)
+		# si alguna carpeta del camino no existe se crea con parents = true, y con exist, si el archhivo
+		# ya existe no se lanza error
+		time.sleep(2)
+		print("Creando carpeta...")
+		time.sleep(2)
+		print("Carpeta creada con exito")
+	archivo = rutaGen / "Libros.txt"
 	archivo.touch(exist_ok=True)
 	return archivo
+"""
+
 # Crear archivo
-
-
-
-
 class Libro:
 	prestado = False
 	"""Clase en la que definimos la estructura de cada libro"""
@@ -55,16 +55,16 @@ class Libro:
 		Ingresar datos a la base de datos en lugar de a un texto
 		"""
 		try:
-			with sqlite3.connect("/home/lissandro/Python_Repox/Gestor de Libreria/Libros/Libros.db") as conn:
+			with sqlite3.connect(rutaGen) as conn:
 				cur = conn.cursor()
 				cur.execute("CREATE TABLE IF NOT EXISTS DetalleLibro (titulo,autor,fecha,isbn,genero,editorial)")
 				cur.execute(
-					"Insert into DetalleLibro (titulo, autor, fecha, isbn, genero, editorial) values (?, ?, ?, ?, ?, ?)",
-					(self.titulo, self.autor, self.detalles['fecha'], self.detalles['isbn'],
-					 self.detalles['genero'], self.detalles['editorial']))
+					"Insert into Libro(Titulo, Autor, Fecha, Genero, Editorial,ISBN) values (?, ?, ?, ?, ?, ?)",
+					(self.titulo, self.autor, self.detalles['fecha'], self.detalles['genero'],
+					 self.detalles['editorial'], self.detalles['isbn']))
 				conn.commit()
 		except sqlite3.Error as error:
-			print("Ha ocurrido un error en alguna parte", error)
+			print("Ha ocurrido un error en alguna parte = >", error)
 
 	def buscar_libro(self):
 		...
@@ -131,16 +131,15 @@ def agregar_libro(titulo, autor, fecha, genero, editorial):
 	objeto = Libro(titulo=titulo_libro, autor=autor_libro, **detalle)
 	# el asterico en detalle, es un desempaquetado especial de diccionario clave, valor, si donde queremos sobreescribir los mismos datos, se nombraran como tal
 	# es decir, se acoplaran solos a los elementos disponibles
-	libro_actual = Path("/home/lissandro/Python_Repox/Gestor de Libreria/Libros/Libros.txt")
 	if isinstance(objeto, Libro):
-		objeto.ingresar_libro_DB() # si el objeto se creo, se ingresa a la database
-		with open(libro_actual, "a") as lerbo:
+		objeto.ingresar_libro_DB()  # si el objeto se creo, se ingresa a la database
+		with open(ruta_escritura, "a") as lerbo:
 			try:
 				lerbo.writelines(str(objeto) + "\n")
 			except FileNotFoundError:
-				print(f"No se encontro el archivo final de la ruta {libro_actual}")
+				print(f"No se encontro el archivo final de la ruta {objeto}")
 			else:
-				print("EL libro se anadio exitosamente")
+				print("El libro se añadio exitosamente")
 	return objeto
 
 # libro_nuevo = agregar_libro()

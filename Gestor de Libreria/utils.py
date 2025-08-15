@@ -16,17 +16,21 @@ asi mismo formatear las impresiones
 """
 
 def creacion_isbn():
-	ean = 978
-	country = randint(0, 998)
-	editorial = randint(0, 998)
-	id_publicacion = randint(0, 998)
-	digito_control = randint(0, 10)
-	isbn = str(ean) + "-" + str(country) + "-" + str(editorial) + "-" + str(id_publicacion) + "-" + str(digito_control)
-	return isbn
+	Ean = 978
+	Country = randint(0, 998)
+	Editorial = randint(0, 998)
+	Publicacion_ID = randint(0, 998)
+	DigitoControl = randint(0, 10)
+	ISBN = str(Ean) + "-" + str(Country) + "-" + str(Editorial) + "-" + str(Publicacion_ID) + "-" + str(DigitoControl)
+	return ISBN
 
-def generar_id():
-	id_gen = randint(1, 999)
-	return id_gen
+
+def generar_id(name):
+	"""Con esta funcion crearemos un id unico"""
+	nom = list(choices(name, k=3))
+	n = randint(1, 99)
+	Gen_ID = f"{"".join(nom)}{n}"
+	return str(Gen_ID)
 
 
 def malas_palabras(palabra):
@@ -39,4 +43,14 @@ def malas_palabras(palabra):
 	else:
 		return False
 
-# Posteriormente colocarle el isbn por delante ISBN 000-000-00000-0-0
+
+def verificarIndentidad():
+
+	return
+
+def idArtifcial():
+	n = 0
+	while True:
+		yield n
+		n += 1
+

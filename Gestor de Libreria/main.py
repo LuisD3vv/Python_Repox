@@ -2,9 +2,10 @@
 import time
 from Gestores.gestor_libros import agregar_libro as agl  # asi agregamos una funcion especifica
 from Gestores.gestor_usuarios import ingresar_usuario as inguser
+from Gestores.gestor_prestamos import prestar_libro, validadar_metodo
+from utils import generar_id
 from utils import malas_palabras
 from datetime import date
-
 
 """
 Es mucho mejor utilizar rutas absolutas, MUCHISMO, asi que a la hora de hacerlo portable
@@ -20,8 +21,6 @@ fecha_hoy = fecha.strftime("%d-%m-%Y")
 
 
 #  print(dia_hoy,mes_hoy,anio_hoy)
-
-
 def validar_titulo(titulo):
 	if malas_palabras(titulo):
 		print('Hay palabras mal sonantes')
@@ -137,18 +136,52 @@ def agregar_libros():
 
 
 def registrar_usuario():
-	#system("clear")
+	#  system("clear")
 	print("Hola, Bienvenido!\nTe pediremos algunos datos para continuar.")
-	nombre = input("Ingresa tu nombre: ")
-	apellido = input("Ingresa tu apellido: ")
+	nombre = input("Ingresa tu Nombre: ")
+	apellido = input("Ingresa tu Apellido: ")
 	edad = int(input("Edad: "))
-
-	inguser(nombre, apellido, edad)
+	userid = generar_id(nombre)
+	inguser(userid, nombre, apellido, edad)
+	print(f"Hola {nombre} tu id es [=>{userid}<=]\nNo lo pierdas.")
 
 
 def prestamo_libro():
-	print("Has seleccionado prestar libro")
-	print("Para realizar un prestamo es necesario estar registrado con una id.")
+	print("Para realizar un prestamo es necesario estar Registrado.")
+	print("Opciones para solicitar un prestamo\n1) ID\n2) Nombre\n3) DNI")
+	opcion_prestamo = int(input(">> "))
+	if opcion_prestamo == 1:
+		print("Ingresa el ID")
+		temporal_id = input(">> ")
+		try:
+			if validadar_metodo(1, temporal_id) == "usuario existente":
+				print("Ingresa el nombre del libro")
+				# verificar que el estado del prestamo del libro este en false y mostrar los que esten en false
+		except ValueError:
+			print("No se pudo registrar el prestamo")
+
+	elif opcion_prestamo == 2:
+		print("Ingresa lo siguiente a continuacion")
+		print("Primer Nombre")
+		nombre = input(">> ")
+		print("Apellido Paterno")
+		apellido = input(">> ")
+		try:
+			if validadar_metodo(2, nombre, apellido) == "usuario existente":
+						print("Ingresa el nombre del libro")
+			# Mostrar libros disponibles segun el que pida
+		except ValueError:
+			print("No se pudo registrar el prestamo")
+
+	elif opcion_prestamo == 3:
+		print("Sube un documento de tu identificacion oficial")
+		ine = int(input("Ingresa el numero detras de tu ine"))
+		try:
+			validadar_metodo(3, ine)
+		except ValueError:
+			print("Algo salio mal")
+	else:
+		print("ocurrio un error")
 
 
 def mostrar_libros_disponibles():
@@ -157,9 +190,10 @@ def mostrar_libros_disponibles():
 
 def buscar_Libro():
 	"""Buscar por nombre, autor y género"""
-	#system("clear")
-	print("Buscar por\n1) Autor\n2) Nombre\n3) Genero")
-	busqueda = int(input("Eleccion: "))
+	#  system("clear")
+	print("Buscar Libro por\n1) Autor\n2) Nombre\n3) Genero")
+	print("Eleccion: ")
+	busqueda = int(input(">> "))
 
 
 print("Cargando...")
@@ -167,28 +201,30 @@ time.sleep(3)
 print("Listo!")
 
 
-#system("clear")
-#  Interfaz base
+#  system("clear")
+#   Interfaz base
 def main():
-	#system("clear")
+	#  system("clear")
 	while True:  # Sistema de gestion internacional de biblioteca
-		print("Bienvenido al -SDGIB-")
+		print("Bienvenido al Sistema de Gestion de Librerias.")
+		print("=============================")
 		print(
-			"1) Agregar Libro\n2) Registrar usuario\n3) Pedir un Libro\n4) Libros disponibles\n5) Buscar Libro\n6) Salir")
+			"=> 1) Agregar Libro 📚\n=> 2) Registrar Usuario 🧑‍💻\n=> 3) Pedir un Libro 🤲\n=> 4) Libros Disponibles 📖\n=> 5) Buscar Un Libro 🔍\n=> 6) Salir🚪")
+		print("=============================")
 		while True:
 			try:
-				print("Selecciona la opcion de tu interes")
+				print("Que deseas realizar?")
 				opcion = input(">> ")
 				if opcion == "nada":
 					exit()
 			except ValueError as e:
-				#system("clear")
-				print(f"Opcion entera incorrecta => error [|{e}|]")
+				#  system("clear")
+				print(f"Opcion entera incorrecta => error [=>{e}<=]")
 			except KeyboardInterrupt:
-				print("Has salido del codigo")
+				print("Saliendo...")
+				break
 			else:
 				break
-		print(f"La opcion elegida es {opcion}")
 		match opcion:
 			case '1':
 				agregar_libros()
