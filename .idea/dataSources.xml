@@ -8,11 +8,11 @@
       <jdbc-url>jdbc:sqlite:C:\Users\Lissandro\PycharmProjects\Python_Repox\Funciones-metodos-y mas\sqlite3\estudiantes.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="Libros.db" uuid="b03a95f5-3fce-409a-9587-a9afdfdc9ba6">
+    <data-source source="LOCAL" name="GestorGeneral.db" uuid="b03a95f5-3fce-409a-9587-a9afdfdc9ba6">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/Gestor de Libreria/Libros/Libros.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/Gestor de Libreria/extra/GestorGeneral.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="Usuarios.db" uuid="ed420dba-b2f3-4d07-b055-59a95694d62b">

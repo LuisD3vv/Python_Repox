@@ -13,7 +13,7 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="Libros.db" uuid="b03a95f5-3fce-409a-9587-a9afdfdc9ba6">
+    <data-source name="GestorGeneral.db" uuid="b03a95f5-3fce-409a-9587-a9afdfdc9ba6">
       <database-info product="SQLite" version="3.45.1" jdbc-version="4.2" driver-name="SQLite JDBC" driver-version="3.45.1.0" dbms="SQLITE" exact-version="3.45.1" exact-driver-version="3.45">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
