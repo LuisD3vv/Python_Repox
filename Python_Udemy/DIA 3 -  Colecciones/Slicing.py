@@ -20,3 +20,9 @@ print(fragmento)
 texto = "ABCDEFGHIJKLM"
 fragmento = texto[::]
 print(fragmento)
+
+# recorte al reves
+
+texto = "Luisito"
+fragmento = texto[:10:-1]
+print(fragmento)

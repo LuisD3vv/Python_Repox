@@ -1,5 +1,7 @@
-texto = open('A_Udemy/DIA 3 -  Colecciones/texto_proyecto_dia3.txt', 'r')
-texto = texto.read().lower()
+from collections import defaultdict
+
+leer = open('texto_proyecto_dia3.txt', 'r')
+texto = leer.read().lower()
 
 letras = []
 letra1 = input("ingresa la primera letra: ").lower()
@@ -48,15 +50,31 @@ dic = {True: "si", False: "no"}
 print(f'La palabra "python" {dic[palabra]} se encuentra en tu texto')
 
 print("\n")
-#Comprobar si hay vocales
+leer.close()
+
+
+#  Comprobar si hay vocales
 
 def contar_vocales(cadena):
-  vocales = ['a','e','i','o','u']
-  #Utilizando el dictionario comprehesion
-  conteo = {v: cadena.count(v) for v in cadena if cadena.count(v) > 0}
+	vocales = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
+	for letra in cadena.lower():
+		if letra in ('a', 'e', 'i', 'o', 'u'):
+			vocales[letra] += 1
+	return vocales
 
-  for vocal, cantidad in conteo.items():
-    print(f"La vocal '{vocal}' aparece {cantidad} veces .")
+def contar_vocales2(cadena):
+	# con el defaultdict no necesitamos declarar nada
+	#  ya que de n existir se creara y se le coloca un numero
+	#  entero de 0 si se intenta acceder
+	vocales = defaultdict(int)
+	for letra in cadena.lower():
+		if letra in ('a', 'e', 'i', 'o', 'u'):
+			vocales[letra] += 1
+	return vocales
 
 
+print("Cantidad de vocales en tu texto: ")
 contar = contar_vocales(texto)
+contar2 = contar_vocales2(texto)
+print(contar)
+print(contar2)

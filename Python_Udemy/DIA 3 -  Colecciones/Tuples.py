@@ -14,10 +14,13 @@ print(text_tuple.count(1))# requiere un parametro que es el valor que deseas sab
 # Las tuplas pueden distribuir el contenido entre otras variables yu desempaquetaras o no segun el caso
 
 nombres = "Luis-Eduardo-jose-William"
-#desempaquetado
+# desempaquetado
 (nombre1, *nombre2, nombre3) = nombres.split("-")
 # Asi ignoramos el valor que no queremos con el guion bajo
 (nombre1, nombre2, _, nombre3) = nombres.split("-")
 print(nombre1, nombre2, nombre3)
+# Tambien podemos crear una tupla con un solo valor, seria asi
+tupla = (5,)
+# es muy util saber esto porque los queries de las base de datos vienen  asi
 
-# y tambien podemos evadir espacios que no necesitemos
+
