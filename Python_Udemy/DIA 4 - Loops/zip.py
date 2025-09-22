@@ -10,3 +10,5 @@ print(combinados)
 for nombre, edades, ciudades in combinados:
     print(f'{nombre} tiene {edades} años y vive en {ciudades}')
 
+
+# perfecta para matrices

@@ -48,3 +48,36 @@ while True:
                 break
             case _:
                 print("Ha ocurrido un pinche error")
+
+
+# match tambien puede usar dos declaraciones
+print("Selecciona una putisima opcion: ")
+opcion = input(">> ")	
+try:
+    opcion = opcion.lower()
+except ValueError:
+    system("clear")
+    print("< Es necesario que ingreses un numero >")
+except KeyboardInterrupt:
+    print("Saliendo...")
+else:
+    match opcion: # type: ignore
+        case "1" | "leer receta":
+            print("!")
+        case "2" | "crear receta":
+            print("!")
+        case "3" | "crear categoria":
+            print("!")
+        case "4" | "eliminar receta":
+            print("!")
+        case "5" | "eliminar categoria":
+            print("!")
+        case "6" | "modificar receta":
+            print("!")
+        case "7" | "limpiar consola":
+            print("!")
+        case "8" | "salir":
+            system("clear")
+            print("Has salido exitosamente.")
+            exit()  # Salida logica del codigo
+

@@ -82,3 +82,4 @@ Cuando queremos verificar una condicion y esta depende de la indentacion actual 
 for num in range(3):
     print(f"El numero actual es: {num}")
 print("Bucle terminado")
+
