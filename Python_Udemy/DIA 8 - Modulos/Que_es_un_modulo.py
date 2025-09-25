@@ -1,5 +1,5 @@
 """
-	Un moodulo en python no es más que otro archivo.py
+	Un modulo en python no es más que otro archivo.py
 	el cual contiene funciones y codigo eque nos ayudan a realziar
 	algunas caracteristicas especiales, ya los hemos usado
 	con anterioridad como él random, time, datetime,path y esos,

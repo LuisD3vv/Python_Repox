@@ -62,7 +62,7 @@ def main():
 		except KeyboardInterrupt:
 			print("Saliendo...")
 		else:
-			match opcion:
+			match opcion: # type: ignore
 				case "1" | "leer receta":
 					leer_receta()
 				case "2" | "crear receta":
