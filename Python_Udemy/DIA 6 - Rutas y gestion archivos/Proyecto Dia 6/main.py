@@ -6,7 +6,7 @@ import time
 from pathlib import Path  # Manipular y crear rutas
 from funciones import *
 
-
+db = 'Recetas.db'
 
 def validar_plataforma():
 	"""
@@ -24,7 +24,7 @@ def validar_plataforma():
 
 
 def numerorecetas():
-	with sqlite3.connect('Recetas.db') as conn:
+	with sqlite3.connect(db) as conn:
 		cur = conn.cursor()
 		cur.execute("Select count(Receta_ID) from Recetas")
 		total = cur.fetchone()

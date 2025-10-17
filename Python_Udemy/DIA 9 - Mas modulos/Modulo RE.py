@@ -77,3 +77,7 @@ patroAlfabetico = r'[a-zA-Z]'
 vocales = r'[aeiou]' # esto buscara cualquier coinciencia completa que contenga esta palabra, no una por una, en es caso se usaria or o pipeline
 
 negacion = r'[^0-9] | [^a-zA-z]' # equivalente a |D
+
+
+# para esto nos puede ayudar
+# rjust(rellenar a la izquierda ocn cualquier caracter), zfill(rellenar a la izquierda solo con ceros)

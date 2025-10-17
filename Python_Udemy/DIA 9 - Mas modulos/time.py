@@ -6,14 +6,14 @@ import timeit
 """
 	nos ayuda a conocer el timepo de ejecucion de un codigo
 
- Timeit requiere de dos parametros, declaracion y la funcion, junto con el argunmento de 
- number que es cuantas veces quieres repetir el experimento
- La sintaxis es esta
- 
- timeit.timeit(declaracion,setup,number=repeticiones)
- 
- 
- """
+	Timeit requiere de dos parametros, declaracion y la funcion, junto con el argunmento de 
+	number que es cuantas veces quieres repetir el experimento
+	La sintaxis es esta
+	
+	timeit.timeit(declaracion,setup,number=repeticiones)
+	
+	
+	"""
 time.sleep(3)
 
 declaracion = '''
