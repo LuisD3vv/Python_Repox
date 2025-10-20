@@ -23,6 +23,7 @@ def decorar_saludo(funcion): # pyright: ignore[reportUnknownParameterType]
         print("Adios")
     return otra_funcion
 
+
 @decorar_saludo
 def mayusculas(texto):
     print(texto.upper())

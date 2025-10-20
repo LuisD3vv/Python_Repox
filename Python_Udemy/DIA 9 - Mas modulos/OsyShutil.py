@@ -13,7 +13,7 @@ for i in os.listdir():
 ruta = "/home/lissandro/Escritorio/calculator-app-main"
 
 for carpeta, subcarpeta, archivo in os.walk(ruta):
-	print(f'en la capeta {carpeta}')
+	print(f'en la carpeta {carpeta}')
 	print(f'Las subcarpetas son:')
 	for sub in subcarpeta:
 		print(f'\t{sub}')
