@@ -114,3 +114,4 @@ def quitar_vidas():
     yield x
 
 perder_vida = quitar_vidas()
+

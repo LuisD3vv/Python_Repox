@@ -12,7 +12,7 @@ def cafe_mas_caro(lista_precios):
             cafe_mas_caro = cafe
         else:
             pass
-
+            # se regresa como tupla
     return (cafe_mas_caro, precio_mayor)
 
 

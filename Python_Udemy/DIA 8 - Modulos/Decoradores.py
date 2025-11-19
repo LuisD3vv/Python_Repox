@@ -15,7 +15,7 @@
 # operacion = cambiar_letras('may')
 # operacion("luis")
 
-def decorar_saludo(funcion): # pyright: ignore[reportUnknownParameterType]
+def decorar_saludo(funcion): 
     
     def otra_funcion(palabra):
         print("Hola")

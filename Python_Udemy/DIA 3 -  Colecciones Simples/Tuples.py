@@ -10,7 +10,8 @@ text_tuple =('luisito','vagina')
 print(t.count(1))# requiere un parametro que es el valor que deseas saber que tanto aparece en el texto
 print(t.index(2)) # localizar elemento
 print(text_tuple.count(1))# requiere un parametro que es el valor que deseas saber que tanto aparece en el texto
-
+print(len(t))
+print(sorted(t))
 # Las tuplas pueden distribuir el contenido entre otras variables yu desempaquetaras o no segun el caso
 
 nombres = "Luis-Eduardo-jose-William"
@@ -23,4 +24,4 @@ print(nombre1, nombre2, nombre3)
 tupla = (5,)
 # es muy util saber esto porque los queries de las base de datos vienen  asi
 
-
+# Las tuplas son colecciones de elemetos desordenmadas, por lo cual no tiene indices, se accede a ellos mediante

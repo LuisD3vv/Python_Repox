@@ -36,7 +36,7 @@ def crear_cliente():
     para elegir entre crear o iniciar sesion
     """
     system("clear")
-    print("Hola, Bienvenido, para comenzar,Ingresa los datos solicitados")
+    print("Hola, Bienvenido")
     nombre = input("Ingresa tu Nombre: ")
     apellido = input("Ingresa un Apellido: ")
     depo = input("\U000026A0 Necesitas un deposito minimo de $500 para aperturar tu cuenta, estas de acuerdo? (si-no): ")
@@ -91,7 +91,7 @@ def inicio():
             print(f"Hasta pronto {cliente_actual.nombre} \U0001F44B\nUtimo acceso -{fecha}")
             break
     if cliente_actual.balance <= 0:
-        print(f"Has Agotado tus ahorros, ingresa de nuevo o realiaza un deposito\nUtimo acceso {fecha}")
+        print(f"Has Agotado tus ahorros, ingresa de nuevo o realuza un nuevo deposito\nUtimo acceso {fecha}")
 #Iniciar loop y llamar a la funcion inicio
 
 inicio()

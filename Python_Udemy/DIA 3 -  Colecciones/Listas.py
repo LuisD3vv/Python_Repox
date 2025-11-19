@@ -11,6 +11,13 @@ print(eliminado)
 lista = ['g', 'o','b', 'm', 'c']
 lista2 = [1, 3, 6,2,7,5,1]
 lista.sort() # reorganizar elementos
+lista.insert()
+lista.index()
+lista.remove()
+lista.count()
+lista.clear()
+lista.pop()
+lista.copy()
 lista.reverse() # literalmente al reves
 print(lista)
 print(lista2)

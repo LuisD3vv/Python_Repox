@@ -18,7 +18,7 @@ try:
 	if isinstance(auto,Coche):
 		print("Si es un objeto")
 	else:
-		print("culo")
+		print("No es un objeto")
 except ValueError:
 	print("Error")
 finally:

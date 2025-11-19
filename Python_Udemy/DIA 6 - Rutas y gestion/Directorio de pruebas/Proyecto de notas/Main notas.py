@@ -8,9 +8,10 @@ opcion = int(input(
         "4. Eliminar nota\n"
         "5. Salir\n"))
 
-ruta = Path.home() / "PycharmProjects"/"Python_Repox"/"Code"/"DIA6"/"Directorio de pruebas"/ "Proyecto de notas" / "notas"
-print(f"Ruta actual es {ruta}")
 
+ruta = os.path.join(os.path.dirname(__file__),'notas/')
+print(f"Ruta actual es {ruta}")
+os.system("clear")
 while True:
     print(f"Numero de Notas disponibles: [{len(os.listdir(ruta))}]")
     if opcion == 1:

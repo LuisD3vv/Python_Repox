@@ -5,10 +5,9 @@ import ejemplo_unittest
 """
 unittest es un metodo o una herramienta
 nos funciona para determinar si un modulo o un conjunto 
-de modulosde codigo funciona correctamente
+de modulos de codigo funciona correctamente.
 
 """
-
 
 class probar_cambiaTexto(unittest.TestCase):
     """

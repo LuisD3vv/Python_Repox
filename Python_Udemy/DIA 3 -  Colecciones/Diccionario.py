@@ -1,3 +1,4 @@
+from  collections import defaultdict
 cliente = {'nombre': 'Luis', 'apellido': 'Aguilar', 'peso': 97, 'talla': 1.95}
 consulta = (cliente['apellido'])
 print(consulta)
@@ -91,3 +92,7 @@ for clave, valor in usuarios.items():
       print("Porfavor ingresa un numero papuh")
     else:
       print(usuarios.get(buscar))
+
+
+# Crear un diccionario default int donde la clave iniciara en 0
+nombres = defaultdict(int)

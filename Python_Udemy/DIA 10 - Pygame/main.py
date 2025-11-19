@@ -3,7 +3,7 @@ from pygame import mixer
 #print(pygame.__version__)
 
 
-# simpre utilizar rutas absolutas
+# siempre utilizar rutas absolutas
 ruta = os.path.join(os.path.dirname(__file__))
 
 
@@ -64,8 +64,7 @@ bala_x_cambio = 0
 bala_y_cambio = 3
 bala_visible = True
 
-# tranformar texto a bytes
-
+# tranformar texto a bytes solo necesario si convertimos a ejecutable
 def fuente_bytes(fuente):
     with open(fuente,'rb') as f:
         tft_bytes = f.read()
@@ -78,15 +77,16 @@ texto_x = 10
 texto_y = 10
 
 # texto final
-fuente_como_bytes = fuente_bytes('fonts/Pikabu.ttf')
-fuente_final = pygame.font.Font(os.path.join(ruta,fuente_como_bytes),45)
-fuente = pygame.font.Font(os.path.join(ruta,fuente_como_bytes),25)
+fuente = 'fonts/Pikabu.ttf'
+fuente_final = pygame.font.Font(os.path.join(ruta,fuente),45)
+fuente = pygame.font.Font(os.path.join(ruta,fuente),25)
 
 
 # Texto al finalizar
 def texto_final():
     mi_fuente_final = fuente_final.render('JUEGO TERMINADO',True,(255,255,255))
     pantalla.blit(mi_fuente_final,(160,250))
+
 
 # funcion mostrar puntaje
 def mostrar_puntaje(x,y):
@@ -113,7 +113,7 @@ def disparar_bala(x: int,y: int):
 # evaluar colisiones
 def calcular_colisiones(x_1,y_1,x_2,y_2):
     # Formula para calcular distancia entre dos puntos
-    distancia = math.sqrt(pow((x_2-x_1),2)+ pow((y_2-y_1),2))
+    distancia = math.sqrt(pow((x_2-x_1),2) + pow((y_2-y_1),2))
     # definiendo el hitbox de nuestro personaje
     if distancia < 27:
         return True
@@ -165,7 +165,6 @@ while se_ejecuta:
             for k in range(cantidad_enemigos):
                 enemigo_y[k] = 1000
                 jugador_x_cambio = 0
-                
                 texto_final()
             break
         enemigo_x[e] += enemigo_x_cambio[e]

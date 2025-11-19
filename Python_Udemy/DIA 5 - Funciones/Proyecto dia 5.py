@@ -11,16 +11,16 @@ import random
 # LISTA DE PALABRAS
 
 lista_palabras = ['luis',
-                  'sabina',
-                  'eduardo',
-                  'gato',
-                  'perro',
-                  'git',
-                  'elote',
-                  'vape',
-                  'capibara',
-                  'coco',
-                  'amargura']
+                'sabina',
+                'eduardo',
+                'gato',
+                'perro',
+                'git',
+                'elote',
+                'vape',
+                'capibara',
+                'coco',
+                'amargura']
 
 
 # FUNCION QUE REGRESA UNA PALABRA AL AZAR
@@ -56,14 +56,14 @@ while bucle:
 
 
     for i in range(len(comparacion)):
-     if intento == comparacion[i]:
-        guiones[i] = intento
-        acierto = True # si hay al menos un acierto
+        if intento == comparacion[i]:
+            guiones[i] = intento
+            acierto = True # si hay al menos un acierto
 
 
     if not acierto:
-      vidas -= 1
-      print(f"Te quedan {vidas} intentos")
+        vidas -= 1
+        print(f"Te quedan {vidas} intentos")
 
     if guiones == comparacion:
         bucle = False

@@ -19,8 +19,9 @@ from pathlib import Path
 #     print(lectura2.read())
 
 # mas sencillo
-ruta_documentos = Path("documentos")
-ruta = os.listdir("documentos")
+os.system("clear")
+ruta_documentos = os.path.join(os.path.dirname(__file__),"documentos/")
+ruta = os.listdir(ruta_documentos)
 print("Archivos extension [.html] disponibles:")
 for archivo in ruta:
     if archivo.endswith(".html"):
@@ -36,7 +37,7 @@ if not os.listdir(ruta_documentos):
     crear = input("Quieres crear uno?: ")
     if crear == "si":
         arch = input("ingresa el nombre del archivo: ")
-        ruta_nueva = ruta_documentos / (arch + ".html")
+        ruta_nueva = Path(ruta_documentos + arch + ".html")
         ruta_nueva.touch(exist_ok=True)
         print(f"Archivo creado en {ruta_nueva}")
         # ruta_documentos.joinpath(arch + ".html")
@@ -60,10 +61,10 @@ else:
                             print(f"Archivo {sinex} borrado")
                             break
                         else:
-                             print("Archivo no encontrado")
+                            print("Archivo no encontrado")
                 case 2:
                     arch = input("ingresa el nombre del archivo: ")
-                    ruta_nueva = ruta_documentos / (arch + ".html")
+                    ruta_nueva = Path(ruta_documentos + arch + ".html")
                     ruta_nueva.touch(exist_ok=True)
                     with open(ruta_nueva, "+a") as archivo:
                         archivo.write("culo culo" + '\n')

@@ -5,4 +5,7 @@ def resta(a,b):
 def division(a,b):
 	return a * b
 def multiplicacion(a,b):
-	return b / a
+	if b == 0:
+		print("Dividendo igual a cero.")
+		return "DIV/0!"
+	return a / b

@@ -1,3 +1,6 @@
+
+# funciona con elementos iterables
+
 menor = min(58, 96, 72, 64, 35)
 mayor = max(58, 96, 72, 64, 35)
 

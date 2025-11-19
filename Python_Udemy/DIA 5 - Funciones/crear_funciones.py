@@ -8,3 +8,12 @@ def saludar_persona(nombre):
     el hola + el nombre otorgado
     """
 saludar_persona("Luis")
+
+# Las funciones pueden usarse de diferentes formas, ya sea como simple funcion, en un if, o incluso en una variable
+
+
+resultado = saludar_persona("eduardo")
+
+if saludar_persona("luis") == 'Hola Luis':
+    print(True)
+    

@@ -1,8 +1,0 @@
-User: Luis | Psswd: $2b$12$2AF4RmNX3Gl5F.cdcPmXwuJwe1VT8V7.gplKLp2A79Hw9Ccsl.PFW | Date: 2025-06-05 11:51:30
-
-User: Eduardo | Psswd: $2b$12$mslH1S3thzMC6IfcEpf.y.JLxXm.mRwdVypsFnBHqRn4H.1l6hOce | Date: 2025-06-05 11:56:30
-
-User: JOse | Psswd: $2b$12$wWkGo.XMnG5wcL5wxah.Q.ZEadZqlUO/RKZmv6qrC/OLxiUlulRMu | Date: 2025-06-10 21:04:22
-
-User: Lissandro | Psswd: $2b$12$u48qU670YtNBEnjNBOF5neJzLeKTxC3dJJhJmMwHxwL/kOprlz/4m | Date: 2025-06-10 21:10:51
-

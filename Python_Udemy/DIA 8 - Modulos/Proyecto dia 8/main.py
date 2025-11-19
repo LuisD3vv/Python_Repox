@@ -21,16 +21,17 @@ opcion = 0
 print("Cargando...")
 time.sleep(2)
 print("Bienvenido a Farmacias Python\nQue deseas realizar hoy")
+
 """
 Las funciones no necesitan ser guardadas en una variable ni impresas, esto debido a que ya imprimen al ser llamadas
-y solamenet esperan el argumento para ejecutarse
+y solamente esperan el argumento para ejecutarse
 """
+
 def main():
 	bucle = True
 	while bucle:
 		print("Selecciona una opcion")
-		print("1) Farmacia\n2) Cosmetica\n3) Cita Medica\n4) Salir")
-
+		print(" 1) Farmacia\n 2) Cosmetica\n 3) Cita Medica\n 4) Salir")
 		try:
 			opcion = input(">> ")
 			if opcion not in ["1", "2", "3", "4"]:

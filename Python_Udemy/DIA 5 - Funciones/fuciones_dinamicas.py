@@ -1,3 +1,7 @@
+'''
+Con funciones dinamicas nos referimos a fuciones que sirven como argumentos de otras fucniones gracias a return
+'''
+
 def chequear_3_cifras(lista):
     numero_tres_c = []
 
