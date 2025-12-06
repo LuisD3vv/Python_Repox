@@ -1,6 +1,9 @@
+# cuando no sabemos de antemano el numero de parametro quep pse pasaran a la funcion, utilizar args es nuestra salvacion 
 def suma(*args):
     total = 0
-
+    # usar un solo elemento
+    elemento1 = args[0]
+    print(elemento1)
     for arg in args:
         total += arg
     return total
@@ -44,9 +47,11 @@ def prueba(num1, num2, *args, **kwargs):
     print(f"El primer valor es {num1}")
     print(f"El segundo valor es {num2}")
 
+    # parametro por parametro
     for arg in args:
         print(f"arg = {arg}")
-
+        
+    # parametro por clave:valor., de forma de un diccionario.
     for clave, valor in kwargs.items():
         print(f"{clave} = {valor}")
 
@@ -58,7 +63,7 @@ prueba(10, 39, *args, **kwargs)
 
 
 def cantidad_atributos(**kwargs):
-   return len(kwargs)
+    return len(kwargs)
 
 
 total = cantidad_atributos(A = 8, B= 5, C = 9)
@@ -79,3 +84,9 @@ def describir_persona(nombre, **kwargs):
 
 kwargs = {'color_ojos': 'Cafe', 'color_pelo': 'Cafe oscuro'}
 describir_persona("Luis", **kwargs)
+
+
+'''
+cabe aclarar que todos los parametros que entran a una fuincion de la forma de args o kwargs, se transforman en string naturalmente, no importa si una edad o algo
+
+'''

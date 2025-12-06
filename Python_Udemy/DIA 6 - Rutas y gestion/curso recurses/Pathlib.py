@@ -1,6 +1,6 @@
 from pathlib import Path,PureWindowsPath
 
-# La ruta tiene que ser muy especifica
+# La ruta tiene que ser muy especifica, tambien alk convertirlas en objetos patlike se usaran lo smetodos que est incorpore
 carpeta = Path.home() / "Python_Repox/A_Udemy/DIA 6 - Rutas y gestion archivos/curso recurses/mi_archivo.txt" # Usar en linux
 ruta_windows = PureWindowsPath(carpeta)
 print(ruta_windows)

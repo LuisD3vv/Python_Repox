@@ -17,7 +17,7 @@ for indice, nombre in enumerate(lista):
     print(indice,nombre)
     
     
-# es util para menus intecractivos
+# es util para menus iteractivos
 
 lista = ["Luis","eduardo","aguilar"]
 

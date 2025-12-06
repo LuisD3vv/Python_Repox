@@ -1,17 +1,14 @@
 '''
-Con funciones dinamicas nos referimos a fuciones que sirven como argumentos de otras fucniones gracias a return
+Con funciones dinamicas nos referimos a fuciones que sirven como argumentos de otras funciones gracias a return y a qeue soin funciones ciudadanas de primera clase
 '''
 
 def chequear_3_cifras(lista):
     numero_tres_c = []
-
     for n in lista:
         if n in range(100, 1000):
             numero_tres_c.append(n)
-
         else:
             pass
-
     return numero_tres_c
 
 
@@ -28,7 +25,7 @@ print(suma(6, 6))
 
 
 def celcius_a_farenheit(celcius):
-    farenheit = (celcius * 9 / 5) + 32
+    farenheit = ( celcius * 9 / 5 ) + 32
     return farenheit
 
 

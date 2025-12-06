@@ -2,7 +2,7 @@
 Hecho por Luis Alejandro Aguilar Soberanes 28/01/2025 finalizado el 17/02/2025
 
 Proyecto: Proyecto Final dia 5 Curso A_Udemy
-  Descripcion: Juego del ahorcado basico
+    Descripcion: Juego del ahorcado basico
 
 """
 
@@ -10,17 +10,7 @@ import random
 
 # LISTA DE PALABRAS
 
-lista_palabras = ['luis',
-                'sabina',
-                'eduardo',
-                'gato',
-                'perro',
-                'git',
-                'elote',
-                'vape',
-                'capibara',
-                'coco',
-                'amargura']
+lista_palabras = ['luis','eduardo','gato','perro','git','elote','vape','capibara','coco','amargura']
 
 
 # FUNCION QUE REGRESA UNA PALABRA AL AZAR
@@ -46,7 +36,7 @@ vidas = 5
 bucle = True
 
 while bucle:
-    print("-----------------------------")
+    print("============================")
     print("Adivina la siguiente palabra")
     print(" ".join(guiones))
     print("\n")

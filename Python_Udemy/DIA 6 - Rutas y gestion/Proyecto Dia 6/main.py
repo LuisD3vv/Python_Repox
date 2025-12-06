@@ -7,39 +7,28 @@ from pathlib import Path  # Manipular y crear rutas
 from funciones import *
 
 db = 'Recetas.db'
+ruta = os.path.join(os.path.dirname(__file__),db)
 
 def validar_plataforma():
-	"""
-	funcion para formatear el sistema de comandos de la funcion system
-	para que funcione en windows o linux repectivamente
-	"""
-	sistema = []
-	if name == "posix":
-		print("Sistema Linux")
-		sistema.append("clear")
+	if os.name == "posix":
+		return "clear"
 	else:
-		print("Sistema Windows")
-		sistema.append("cls")
-	return "".join(sistema)
+		return "cls"
 
 
 def numerorecetas():
-	with sqlite3.connect(db) as conn:
+	with sqlite3.connect(ruta) as conn:
 		cur = conn.cursor()
 		cur.execute("Select count(Receta_ID) from Recetas")
 		total = cur.fetchone()
 		todo = total[0]
 		return todo
 
-
-total = numerorecetas()
-
-
 def main():
 	system(validar_plataforma())
 	# print(type(total))
 	while True:
-		print(f"Recetas disponibles: [ {total} ]")
+		print(f"Recetas disponibles: [ {numerorecetas()} ]")
 		print(f"========================")
 		print(f"Bienvenido a Recetame!")
 		print("•1) Leer Receta\n"
@@ -50,7 +39,7 @@ def main():
 			"•6) Modificar Receta\n"
 			"•7) Limpiar Consola\n"
 			"•8) Salir\n")
-		print("\u00A92025 LuisD3v")
+		print("\u00A9 2025 LuisD3v")
 		print(f"========================")
 		print('¿Que deseas realizar?')
 		opcion = input(">> ")	
@@ -81,7 +70,4 @@ def main():
 					system(validar_plataforma())
 					print("Has salido exitosamente.")
 					exit()  # Salida logica del codigo
-
-
-
 main()

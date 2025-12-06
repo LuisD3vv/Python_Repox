@@ -5,7 +5,7 @@ import os
 
 ruta = Path("A_Udemy/DIA 6 - Rutas y gestion archivos/Directorio de pruebas/nombres.txt")
 """
-mi error fue tratar de utilizar las rutas de windows en linux, por eso no detectaba mi archivo
+un error es tratar de utilizar las rutas de windows en linux, por eso no detectaba mi archivo
 
 en el otro caso seria 
 
@@ -27,7 +27,7 @@ print(lectura.readline())
 # # cerramos el archivo 
 lectura.close()
 
-# o com with open as
+# o manejo de contexto with as
 with open (ruta) as lectura:
     print(lectura.read())
 
@@ -45,9 +45,9 @@ print(os.path.isfile(directorio_nombre))
 
 try:
     with open (ruta) as lectura:
-        #  seek mueve el cursor a una locacicion deseada en el archivo
+        #  seek mueve el cursor a una localizacion deseada en el archivo
         print(lectura.seek(10))
-        # nos permite eliminar o remover contenido desde cierto punto pasado como parametro
+        # nos permite eliminar o remover contenido desde cierto punto pasado como parametro, es decir lee hasta cierto punto
         print(lectura.truncate(10))
 finally:
     print("exito")

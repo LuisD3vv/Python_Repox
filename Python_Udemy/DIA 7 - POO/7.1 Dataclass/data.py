@@ -8,7 +8,7 @@ class Persona:
     # anadir campo opcional
     direccion: Optional[str] = None
 def __str__():
-    print(f"Mi nombre es {}")
+    ...
 
 luis = Persona("culo",21)
 print(luis)

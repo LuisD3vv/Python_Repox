@@ -9,7 +9,7 @@ resultado_techo = math.ceil(n)
 
 """
 resultado1 = math.log(25,10)
-resultado2= math.log10(25)
+resultado2 = math.log10(25)
 
 output 1 | 1.3979400086720375
 output 2 | 1.3979400086720377

@@ -26,6 +26,7 @@ lectura.close()
 print()
 # no necesitamos cerrar el archivo
 with open ("mi_archivo.txt", 'r') as lect:
+    next(lect) # saltar cabecera, en algunos casos funciona
     if not lect:
         print("vacio")
     # imprime una linea

@@ -6,14 +6,14 @@
 "w" sirve para modificar o crear un archivo. si no existe al momento de crearla, este lo creara automaticamente
 """
 lectura = open("../prueba.txt", 'r')
-for l in lectura:
-    print(l)
+for line in lectura:
+    print(line)
 print(lectura.read(), end=" ")
 
 lectura.close()  # buena practica. / aparte necesaria jajaj
 
 print("con open \n")
-# Otra forma que cierra automaticamente
+# Otra forma que lee y cierra actomaticamente cuadno se deja de leer el archivo
 with open("../prueba.txt", 'r') as lecturita:
     print(lecturita.readlines()) # Regresa una linea
 

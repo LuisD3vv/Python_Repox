@@ -1,8 +1,11 @@
 from pathlib import Path
 import sqlite3
-from os import system,name
+import os 
 from time import sleep
-ruta = 'Recetas.db'
+
+
+db = 'Recetas.db'
+ruta = os.path.join(os.path.dirname(__file__),db)
 
 
 
@@ -12,7 +15,7 @@ def validar_plataforma():
 	para que funcione en windows o linux repectivamente
 	"""
 	sistema = []
-	if name == "posix":
+	if os.name == "posix":
 		print("Sistema Linux")
 		sistema.append("clear")
 	else:
@@ -22,7 +25,7 @@ def validar_plataforma():
 
 
 def crear_Receta():
-	system(validar_plataforma())
+	os.system(validar_plataforma())
 	with sqlite3.connect(ruta) as conn:
 		cur = conn.cursor()
 		cur.execute("SELECT Categoria FROM Categoria")
@@ -61,7 +64,7 @@ def crear_Receta():
 			con.commit()
 			cur.execute("INSERT INTO Recetas(Titulo,Contenido,Categoria) VALUES (?,?,?)", (nombre, final, categoria))
 			con.commit()
-			system(validar_plataforma())
+			os.system(validar_plataforma())
 			print("Receta creada exitosamente")
 	except sqlite3.OperationalError as e:
 		print("Ha ocurrido un error")
@@ -76,7 +79,7 @@ def leer_receta():
 		cur = conn.cursor()
 		cur.execute("SELECT Titulo FROM Recetas")
 		titulos = cur.fetchall()
-		system(validar_plataforma())
+		os.system(validar_plataforma())
 		print("Recetas disponibles:")
 		for receta in titulos:
 			print("•",*receta)
@@ -90,17 +93,16 @@ def leer_receta():
 		cur.execute("SELECT Contenido FROM Recetas WHERE titulo LIKE ?", (eleccionreceta,))
 		cate = cur.fetchone()
 		if not cate:
-			system(validar_plataforma())
+			os.system(validar_plataforma())
 			print("No se encontro ninguna coincidencia.")
 		else:
 			cate = cate[0]
 			print(f"DEBUG #1 {type(cate)} {cate}")
-			system(validar_plataforma())
+			os.system(validar_plataforma())
 			print("-"*50)
 			print("Receta:")
 			print(*cate)
 			print("-"*50)
-	
 
 
 
@@ -112,7 +114,7 @@ def crear_categoria():
 		cur = conn.cursor()
 		cur.execute("INSERT INTO Categoria(Categoria) VALUES (?)", (nombreCategoria,))
 		conn.commit()
-		system(validar_plataforma())
+		os.system(validar_plataforma())
 		print("categoria creada exitosamente")
 
 
@@ -163,7 +165,7 @@ def eliminar_categoria():
 					conn.commit()
 					print(f"Categoria {NombreCategoriaEliminar} eliminada exitosamente.")
 			else:
-				system(validar_plataforma())
+				os.system(validar_plataforma())
 				print("Volviendo al menu.")
 				return
 		else:
@@ -172,7 +174,7 @@ def eliminar_categoria():
 
 
 def modificar_receta():
-	system(validar_plataforma())
+	os.system(validar_plataforma())
 	with sqlite3.connect(ruta) as conn:
 		cur = conn.cursor()
 		cur.execute("select Titulo from Recetas")
@@ -198,7 +200,7 @@ def modificar_receta():
 		cur = conn.cursor()
 		cur.execute("UPDATE Recetas SET Contenido = ? WHERE titulo LIKE ?", (final,eleccionreceta))
 		conn.commit()
-		system(validar_plataforma())
+		os.system(validar_plataforma())
 		print("Se ha actualizado la receta",eleccionreceta)
 
 
@@ -206,4 +208,4 @@ def limpiar():
 	print("Limpiando...")
 	sleep(2)
 	print("Listo!!")
-	system(validar_plataforma())
+	os.system(validar_plataforma())
