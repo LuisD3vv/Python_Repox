@@ -15,11 +15,12 @@ como un turnero
 # es muy util para hacer iteraciones donde se requiere que el valor generado no se de todo de repente
 
 def mi_funcion():
-    lista= []
+    lista = []
     for x in range(1,5):
         lista.append(x*10)
     return lista
 
+# regresara los elemetnos del 1,5 * 10, 5 veces
 def mi_generador():
     for x in range(1,5):
         yield x * 10
@@ -31,6 +32,7 @@ print(mi_funcion())
 
 
 g = mi_generador()
+# Se utiliza la palabra reservada next() para generar el valor siguiente del iterable
 print(next(g))
 print(next(g))
 print(next(g))

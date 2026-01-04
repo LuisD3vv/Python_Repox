@@ -1,10 +1,8 @@
 import re
 
-
 texto = "Si necesitas ayuda llama al (658)-598-9977 las 2 horas al servicio de ayuda online"
 
 # forma antigua
-
 palabra = "ayuda" in texto
 print(palabra)
 

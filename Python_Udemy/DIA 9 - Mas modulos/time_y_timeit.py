@@ -1,5 +1,3 @@
-import time
-
 from time import *
 import timeit
 
@@ -53,7 +51,7 @@ Tambien tenemos la otra forma con time
 incio = time.time()
 funcion(argumento)
 final = time,.time()
-duracion = (final-inicio
+duracion = (final-inicio)
 
 """
 

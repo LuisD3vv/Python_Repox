@@ -28,11 +28,11 @@ es recomendable nvestigar para hacer un codigo mas rico
 y protegido 
 de los mas conodicos 
 nombres mal escritos pero se entiende la idea
-typerror / tipo de dato incorreecto
+typerror / tipo de dato incorrecto
 ValueError / tipo correcto, valor inadecuado
 zeroDivsionError / divison por cero
 syntax error / codigo mal escrito
-indentation error / error de indentacion
+indentation error / error de indentacion(espacios en lugar de tabulaciones)
 name error / error en el nombre de la variable
 index error / indice fuera de la lista
 key error / clave que no existe en un diccionario
@@ -40,7 +40,6 @@ atribute error / metodo o atributo que no exite para un objeto determinado
 filenotfounerror / intentar abrir un archivo que no existe
 osError / ioerror  / abrir archivos mal cerrado o falta de permisos
 """
-
 
 def pedir_numero():
     while True:
@@ -83,7 +82,7 @@ def cociente(num1,num2):
     except TypeError:
             print("Los argumentos a ingresar deben ser números")
     except ZeroDivisionError:
-        print("El segundo argumento no debe ser cero")
+        print("No se puede dividir entre 0.")
     else:
         print(num1/num2)
 cociente(39,0)
@@ -93,9 +92,10 @@ def abrir_archivo(nombre_archivo):
     try:
         with open(nombre_archivo) as archivo:
             print(archivo.read())
-        
     except FileNotFoundError:
         print("El archivo no fue encontrado")
+    except FileExistsError:
+        print("El archivo existe")
     except TypeError:
         print("Error desconocido")
     else:

@@ -51,11 +51,11 @@ print(luis[2])
 
 """
 Una cola doblemente terminada o deque, es una estructura de datos lineal que permite
-insertar y eliminar elementos por ambos extremos
+Insertar y eliminar elementos por ambos extremos
 
 """
 
-# Definimos el maxico largo, una ves alcanazo este, se eliminara el primer elemento si agregamos mas
+# Definimos el maximo largo, una ves alcanazo este, se eliminara el primer elemento si agregamos mas
 # sintaxis es nombre = deque([])
 lista_ciudades = deque(["Londres", "Berlin", "París", "Madrid", "Roma", "Moscú"])
 

@@ -1,5 +1,4 @@
 import os
-import shutil
 import send2trash  #  importado para enviar elementos eliminados a la papelera
 
 archivo = open('curso.txt', 'w') # abrir pero con con el modulo os

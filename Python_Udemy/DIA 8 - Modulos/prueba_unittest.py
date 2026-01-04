@@ -4,7 +4,7 @@ import ejemplo_unittest
 
 """
 unittest es un metodo o una herramienta
-nos funciona para determinar si un modulo o un conjunto 
+nos ayuda para determinar si un modulo o un conjunto 
 de modulos de codigo funciona correctamente.
 
 """
@@ -17,6 +17,8 @@ class probar_cambiaTexto(unittest.TestCase):
     Basicamente hace una comparacion para comprobar si el modulo que creamos hace lo deseado comparandolo
     con un resultado o varible ya predefinida que contiene el valor final que deseamos
     """
+    
+    # Una buena practica es nombrar las funciones iniciando con test
     def test_mayusculas(self):
         palabra = 'Buen dia'
         resultado = ejemplo_unittest.todo_mayusculas(palabra)# modulo-funcion-parametro

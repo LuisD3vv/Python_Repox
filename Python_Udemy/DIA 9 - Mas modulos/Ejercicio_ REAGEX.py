@@ -7,10 +7,7 @@ def verificar_cp(cp):
 	else:
 		print("El código postal ingresado no es correcto.")
 
-
-
 verificar_cp("we1253")
-
 
 def verificar_saludo(frase):
 	if re.search(r'^Hola...',frase):
@@ -18,9 +15,7 @@ def verificar_saludo(frase):
 	else:
 		print("No has saludado")
 
-
 verificar_saludo("Hola Luis como has estado ultimamente")
-
 
 
 def verificar_email(email):

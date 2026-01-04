@@ -8,8 +8,6 @@ datetime.datetime -> fecha + hora (si, la clase para manejarlos a ambos se llama
 datetime.timedelta -> direfencias de tiempo
 datetime.timezone -> para manejar zonas horarias
 """
-
-
 # sistema de 24 horas
 mi_hora = datetime.time(17, 35, 59, 1500)
 """
