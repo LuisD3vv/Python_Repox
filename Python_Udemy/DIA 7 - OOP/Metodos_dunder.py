@@ -22,6 +22,7 @@ class CD:
         print(f"Se ha elimando correctamente [-{self}-]") # Muestra el libro eliminado
     def __getitem__(self):
         print(self)
+        
 mi_cd = CD('Queen', 'The game', 15)
 
 print(mi_cd)

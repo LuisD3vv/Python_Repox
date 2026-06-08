@@ -16,7 +16,6 @@
 # operacion("luis")
 
 def decorar_saludo(funcion): 
-    
     def otra_funcion(palabra):
         print("Hola")
         funcion(palabra)

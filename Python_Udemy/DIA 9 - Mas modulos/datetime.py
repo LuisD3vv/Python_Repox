@@ -4,7 +4,7 @@ from datetime import datetime
 para evitar confusiones
 datetime.date -> solo fechas
 datetime.time -> solo hora
-datetime.datetime -> fecha + hora (si, la clase para manejarlos a ambos se llama igual qu el modulo)
+datetime.datetime -> fecha + hora (si, la clase para manejarlos a ambos se llama igual que el modulo)
 datetime.timedelta -> direfencias de tiempo
 datetime.timezone -> para manejar zonas horarias
 """

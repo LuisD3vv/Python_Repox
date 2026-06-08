@@ -11,7 +11,7 @@ with zipfile.ZipFile('archivo_comprimido.zip', 'w') as mi_zip:
 
 
 # #cerrar el archivo
-# #mi_zip.close()
+# #mi_zip.close() # con with no se necesita porque maneja automaticamente el cierre
 
 # para decomprimir el archivo
 with zipfile.ZipFile('archivo_comprimido.zip', 'r') as zip_abierto:

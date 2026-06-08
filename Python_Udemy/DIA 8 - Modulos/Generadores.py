@@ -61,7 +61,7 @@ print(next(j))
 def secuencia_infinita():
     """
     Como no hay 
-    alguna conficion que lo detenga
+    alguna condicion que lo detenga
     cada que se llame se seguira aumentando el 
     valor
     """

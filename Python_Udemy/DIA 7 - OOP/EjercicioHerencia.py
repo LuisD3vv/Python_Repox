@@ -45,5 +45,5 @@ print(Ornitorrinco.__mro__) # method order resolution
 
 """ 
 Method Resolution Order nos ayuda a conocer la jerarquia de las herencias que tiene una clase
-a la cual se le aplican atributos de otra, por defecto es de derecho a izquierda, siendo tal y como estan en los parametros
+a la cual se le aplican atributos de otra, por defecto es de izquierda a derecha, siendo tal y como estan en los parametros
 """

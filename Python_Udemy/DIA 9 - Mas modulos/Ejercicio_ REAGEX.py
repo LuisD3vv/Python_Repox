@@ -19,7 +19,7 @@ verificar_saludo("Hola Luis como has estado ultimamente")
 
 
 def verificar_email(email):
-    if re.search(r'\w+@\w+\.(com|mx|edu|com.br)$',email):
+    if re.search(r'\w+@\w+\. $',email):
         print(f"email {email} correcto")
     else:
         print("La dirección de email es incorrecta")

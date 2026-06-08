@@ -3,6 +3,7 @@ from random import randint
 from datetime import datetime
 # from pathlib import Path
 from os import system
+
 fecha = datetime.now().strftime("%Y-%m-%d %H:%M:%S") # formato de impresion
 class Persona:
     """
@@ -24,12 +25,10 @@ class Cliente(Persona):
         return f"El largo de tu cuenta es de {len(self.nombre)}"
     def retirar(self,retiro):
         """Realizar retiros guardamos y modificamos el atributo real segun el objeto"""
-        menos = self.balance - retiro
-        self.balance = menos
+        self.balance = self.balance - retiro
     def depositar(self,deposito):
         """Realizar depositos, guardamos y modificamos el atributo real segun el objeto"""
-        mas = self.balance + deposito
-        self.balance = mas
+        self.balance= self.balance + deposito
 def crear_cliente():
     """
     Generar a los clientes, posteriormente se añadira la funcion

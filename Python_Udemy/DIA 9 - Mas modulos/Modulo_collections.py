@@ -1,8 +1,6 @@
 from collections import Counter, defaultdict, namedtuple, deque
 
-
 #  Modulos mas importantes de collection
-
 
 # Counter sirve para contar la cantidad de vecesq ue aparece un elemento, ya sea numerico o string
 numeros = [83, 4, 5, 6, 7, 6, 56, 5, 4, 4, 3]
